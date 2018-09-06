@@ -9,13 +9,15 @@ public class PlayerPlatformerController : PhysicsObject
     public float jumpTakeOffSpeed = 7;
 
     //private SpriteRenderer spriteRenderer;
-    //private Animator animator;
+    private Animator animator;
+    private GameObject body;
 
     // Use this for initialization
     void Awake()
     {
         //spriteRenderer = GetComponent<SpriteRenderer>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        body = transform.GetChild(0).gameObject;
     }
 
     protected override void ComputeVelocity()
@@ -36,17 +38,26 @@ public class PlayerPlatformerController : PhysicsObject
             }
         }
 
-        /*
-        bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
-        if (flipSprite)
-        {
-            spriteRenderer.flipX = !spriteRenderer.flipX;
-        }
-
-        animator.SetBool("grounded", grounded);
-        animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-        */
-
         targetVelocity = move * maxSpeed;
+
+        if (Input.GetButton("Horizontal"))
+        {
+            animator.SetBool("IsIdle", false);
+
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                body.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+            else
+            {
+                body.transform.rotation = Quaternion.Euler(0, -90, 0);
+            }
+        }
+        else
+        {
+            animator.SetBool("IsIdle", true);
+        }
     }
+
+
 }
