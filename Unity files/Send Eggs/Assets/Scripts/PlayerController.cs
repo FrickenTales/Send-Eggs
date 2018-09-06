@@ -6,16 +6,21 @@ public class PlayerController : MonoBehaviour {
 
     public float maxSpeed;
     public float jumpForce;
+    public bool canDoubleJump;
+
     private bool facingRight;
     private Rigidbody2D rb2d;
     private GameObject body;
     private float facing;
     private Animator anim;
 
-    private bool grounded;
+    public bool grounded;
     public Transform groundCheck;
+    private Vector2 groundCap = new Vector2 (0.8f,0.35f);
     private float groundRadius = 0.15f;
     public LayerMask whatisGround;
+
+    private bool doubleJump = false;
 
     // Use this for initialization
     void Start ()
@@ -30,9 +35,11 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate ()
     {
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatisGround);
+        //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatisGround);
+        grounded = Physics2D.OverlapCapsule(groundCheck.position, groundCap, CapsuleDirection2D.Horizontal, 90, whatisGround);
 
-
+        if (grounded && canDoubleJump)
+            doubleJump = false;
 
         float move = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
@@ -50,9 +57,18 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if(grounded && Input.GetKeyDown(KeyCode.UpArrow))
+        if (!canDoubleJump)
         {
-            rb2d.AddForce(new Vector2(0, jumpForce));
+            doubleJump = true;
+        }
+
+        if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            //rb2d.AddForce(new Vector2(0, jumpForce));
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+
+            if (!doubleJump && !grounded)
+                doubleJump = true;
         }
     }
 
