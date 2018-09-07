@@ -14,20 +14,25 @@ public class PlayerController : MonoBehaviour {
     private float facing;
     private Animator anim;
 
-    public bool grounded;
-    public Transform groundCheck;
+    private bool grounded;
+    private Transform groundCheck;
     private Vector2 groundCap = new Vector2 (0.8f,0.35f);
     private float groundRadius = 0.15f;
     public LayerMask whatisGround;
 
     private bool doubleJump = false;
 
+    private GM gm;
+
     // Use this for initialization
     void Start ()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GM>();
+
         rb2d = GetComponent<Rigidbody2D>();
         body = transform.GetChild(0).gameObject;
         anim = GetComponent<Animator>();
+        groundCheck = transform.GetChild(1).transform;
 
         Flip();
 	}
@@ -41,13 +46,17 @@ public class PlayerController : MonoBehaviour {
         if (grounded && canDoubleJump)
             doubleJump = false;
 
-        float move = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+        if (!gm.holdPlayer)
+        {
+            float move = Input.GetAxis("Horizontal");
 
-        if (move > 0 && !facingRight)
-            Flip();
-        else if (move < 0 && facingRight)
-            Flip();
+            rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+
+            if (move > 0 && !facingRight)
+                Flip();
+            else if (move < 0 && facingRight)
+                Flip();
+        }
 
         if (Mathf.Abs(rb2d.velocity.x) < 0.5f)
             anim.SetBool("IsIdle", true);
