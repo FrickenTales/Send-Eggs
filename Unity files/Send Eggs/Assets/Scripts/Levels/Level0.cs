@@ -1,21 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level0 : MonoBehaviour {
 
-    public PlayerController player;
-    public WinObjective pan;
-    public ButtonScript panButton;
-    public Transform playerSpawn;
+    private string LevelName = "Send Eggs";
+    private Text levelNameText;
+    private PlayerController player;
+    private WinObjective pan;
+    private ButtonScript panButton;
+    private Transform playerSpawn;
+    private GM gm;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GM>();
+        levelNameText = GameObject.Find("LevelName").GetComponent<Text>();
+        levelNameText.text = LevelName;
+
         //player base stats
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         player.maxSpeed = 9;
-        player.jumpForce = 9;
+        player.jumpForce = 11;
         player.canDoubleJump = false;
 
         //pan
@@ -24,12 +32,20 @@ public class Level0 : MonoBehaviour {
 
         //pan button
         panButton = GameObject.FindGameObjectWithTag("PanButton").GetComponent<ButtonScript>();
+        panButton.isOn = false;
 
         //spawn point
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
         SpawnPlayer();
 	}
+
+    void KillPlayer()
+    {
+        gm.deathCount++;
+        Start();
+        //SpawnPlayer();
+    }
 
     void SpawnPlayer()
     {
@@ -40,6 +56,10 @@ public class Level0 : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
+        if (player.isDead)
+        {
+            player.isDead = false;
+            KillPlayer();
+        }
 	}
 }

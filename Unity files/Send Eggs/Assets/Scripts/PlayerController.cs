@@ -7,11 +7,15 @@ public class PlayerController : MonoBehaviour {
     public float maxSpeed;
     public float jumpForce;
     public bool canDoubleJump;
+    public float maxFallSpeed;
+    private bool willDie = false;
+
+    public bool isDead = false;
 
     private bool facingRight;
     private Rigidbody2D rb2d;
-    private GameObject body;
-    private float facing;
+    public GameObject body;
+    public float facing;
     private Animator anim;
 
     private bool grounded;
@@ -41,7 +45,17 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate ()
     {
         //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatisGround);
-        grounded = Physics2D.OverlapCapsule(groundCheck.position, groundCap, CapsuleDirection2D.Horizontal, 90, whatisGround);
+        //grounded = Physics2D.OverlapCapsule(groundCheck.position, groundCap, CapsuleDirection2D.Horizontal, 90, whatisGround);
+        grounded = Physics2D.OverlapBox(groundCheck.position, groundCap, 0, whatisGround);
+
+        if (rb2d.velocity.y < maxFallSpeed)
+            willDie = true;
+
+        if (grounded && willDie)
+        {
+            isDead = true;
+            willDie = false;
+        }
 
         if (grounded && canDoubleJump)
             doubleJump = false;
@@ -71,13 +85,21 @@ public class PlayerController : MonoBehaviour {
             doubleJump = true;
         }
 
-        if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.UpArrow))
+        if((grounded || !doubleJump) && Input.GetButtonDown("Jump"))
         {
             //rb2d.AddForce(new Vector2(0, jumpForce));
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
 
             if (!doubleJump && !grounded)
                 doubleJump = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            isDead = true;
         }
     }
 
