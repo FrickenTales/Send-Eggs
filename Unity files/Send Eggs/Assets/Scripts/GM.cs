@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class GM : MonoBehaviour {
 
+    public bool testing;
+
     public int currentLevel;
+    public int deathCount;
+    private Text deathCountText;
     private GameObject levelManager;
     private Component currentLevelScript;
     private string levelScriptName;
@@ -17,16 +22,21 @@ public class GM : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        levelScriptName = ("Level" + currentLevel);
-        levelManager = GameObject.Find("LevelManager");
-        levelManager.AddComponent(Type.GetType(levelScriptName));
-        currentLevelScript = levelManager.GetComponent(Type.GetType(levelScriptName));
+        deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
+
+        if (!testing)
+        {
+            levelScriptName = ("Level" + currentLevel);
+            levelManager = GameObject.Find("LevelManager");
+            levelManager.AddComponent(Type.GetType(levelScriptName));
+            currentLevelScript = levelManager.GetComponent(Type.GetType(levelScriptName));
+        }
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-
+        deathCountText.text = (deathCount + " Deaths");
 	}
 
     public void NewLevel()
@@ -40,7 +50,7 @@ public class GM : MonoBehaviour {
 
 
 
-        Invoke("ReleasePlayer", 2.0f);
+        Invoke("ReleasePlayer", 1.4f);
         //winObj.ready = true;
     }
 
