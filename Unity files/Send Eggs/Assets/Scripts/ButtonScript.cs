@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour {
 
-    public Color onColour;
-    public Color offColour;
+    private Vector3 onState = new Vector3(0,5,0);
+    private Vector3 offState = new Vector3(0, 32, 0);
+    private GameObject button;
     public bool isOn = false;
-    private SpriteRenderer sr;
 
 	// Use this for initialization
 	void Start ()
     {
-        sr = GetComponent<SpriteRenderer>();
+        button = transform.GetChild(0).GetChild(0).gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         if (isOn)
-            sr.color = onColour;
+            button.transform.localPosition = onState;
         else
-            sr.color = offColour;
-	}
+            button.transform.localPosition = offState;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
