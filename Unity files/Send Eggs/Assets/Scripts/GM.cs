@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using System;
 
@@ -8,8 +9,11 @@ public class GM : MonoBehaviour {
 
     public bool testing;
 
+    public float levelColour;
     public int currentLevel;
     public int deathCount;
+    public Tilemap tilemap;
+    public Camera cam;
     private Text deathCountText;
     private GameObject levelManager;
     private Component currentLevelScript;
@@ -22,6 +26,10 @@ public class GM : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
+        levelColour = UnityEngine.Random.Range(0.0f, 1.0f);
+
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
 
         if (!testing)
@@ -37,7 +45,9 @@ public class GM : MonoBehaviour {
 	void Update ()
     {
         deathCountText.text = (deathCount + " Deaths");
-	}
+        tilemap.color = Color.HSVToRGB(levelColour, .38f, .66f);
+        cam.backgroundColor = Color.HSVToRGB(levelColour, .12f, .85f);
+    }
 
     public void NewLevel()
     {       
@@ -45,6 +55,7 @@ public class GM : MonoBehaviour {
         Destroy(currentLevelScript);
         levelScriptName = ("Level" + currentLevel);
         levelManager.AddComponent(Type.GetType(levelScriptName));
+        levelColour = UnityEngine.Random.Range(0.0f, 1.0f);
         //levelManager.SetActive(false); levelManager.SetActive(true); // reset level manager to force script to enable, there's probably a batter way
 
 

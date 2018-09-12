@@ -19,7 +19,7 @@ public class WinScreen : MonoBehaviour {
 	public void Change ()
     {
         anim.SetTrigger("PlayWinScreen");
-        bgImage.color = Random.ColorHSV(0, 1, 0.21f, 0.21f, 0.86f, 0.86f, 1, 1);//Random.Range(0,360), 0.21f, 0.86f);
+        bgImage.color = Random.ColorHSV(0, 1, 0.21f, 0.21f, 0.86f, 0.86f, 1, 1);
         winMessage.text = texts[Random.Range(0, texts.Length)];
 	}
 }

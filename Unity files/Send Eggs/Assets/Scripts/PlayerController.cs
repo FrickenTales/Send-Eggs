@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public bool walks;
+
     public float maxSpeed;
     public float jumpForce;
     public bool canDoubleJump;
     public float maxFallSpeed;
+    private float move;
     private bool willDie = false;
 
     public bool isDead = false;
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject body;
     public float facing;
     private Animator anim;
+    private float animSpeed;
 
     private bool grounded;
     private Transform groundCheck;
@@ -60,26 +64,57 @@ public class PlayerController : MonoBehaviour {
         if (grounded && canDoubleJump)
             doubleJump = false;
 
-        if (!gm.holdPlayer)
+        if (walks)
         {
-            float move = Input.GetAxis("Horizontal");
+            if (!gm.holdPlayer)
+            {
+                move = Input.GetAxis("Horizontal");
 
-            rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+                rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
 
-            if (move > 0 && !facingRight)
-                Flip();
-            else if (move < 0 && facingRight)
-                Flip();
+                if (move > 0 && !facingRight)
+                    Flip();
+                else if (move < 0 && facingRight)
+                    Flip();
+            }
+
+            if (Mathf.Abs(rb2d.velocity.x) < 0.5f)
+                anim.SetBool("IsIdle", true);
+            else
+                anim.SetBool("IsIdle", false);
         }
-
-        if (Mathf.Abs(rb2d.velocity.x) < 0.5f)
-            anim.SetBool("IsIdle", true);
         else
-            anim.SetBool("IsIdle", false);
+        {
+            if (!gm.holdPlayer)
+            {
+                if (rb2d.velocity.x == 0)
+                {
+                    move = 0;
+                }
+
+                move = Mathf.Lerp(move, Input.GetAxis("Horizontal"), Time.deltaTime * 2.3f);
+
+                rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+
+            }
+
+            if (grounded)
+            {
+                animSpeed = rb2d.velocity.x / 4.5f;
+            }
+            else
+            {
+                animSpeed = Mathf.Lerp(animSpeed, rb2d.velocity.x / 3, Time.deltaTime * .7f);
+            }
+
+            anim.SetFloat("RollSpeed", animSpeed);
+
+        }
     }
 
     void Update()
     {
+
         if (!canDoubleJump)
         {
             doubleJump = true;

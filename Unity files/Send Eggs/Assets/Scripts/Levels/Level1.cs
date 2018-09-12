@@ -57,7 +57,7 @@ public class Level1 : MonoBehaviour {
     void Update()
     {
         //inverts facing direction
-        player.body.transform.rotation = Quaternion.Euler(player.body.transform.rotation.x, player.facing * -1, player.body.transform.rotation.z);
+        //player.body.transform.rotation = Quaternion.Euler(player.body.transform.rotation.x, player.facing * -1, player.body.transform.rotation.z);
 
         if (player.isDead)
         {

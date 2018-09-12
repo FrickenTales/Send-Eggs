@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 50718053322049962}
   - component: {fileID: 114145560345413066}
   m_Layer: 9
-  m_Name: Player
+  m_Name: Player_Walking
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1768578650725906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.023, y: 0.122, z: 0}
+  m_LocalPosition: {x: -0.023, y: 0.021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4616370961245856}
@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d339c48d8c42d4ba71e91a97dd3168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walks: 1
   maxSpeed: 9
   jumpForce: 11
   canDoubleJump: 0
