@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Level1 : MonoBehaviour {
 
-    private string LevelName = "sggE dneS";
-    private Text levelNameText;
     private PlayerController player;
     private WinObjective pan;
     private ButtonScript panButton;
@@ -17,11 +15,9 @@ public class Level1 : MonoBehaviour {
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
-        levelNameText = GameObject.Find("LevelName").GetComponent<Text>();
-        levelNameText.text = LevelName;
 
         //player base stats
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = transform.GetChild(0).GetComponent<PlayerController>();
         player.maxSpeed = -9;
         player.jumpForce = 11;
         player.canDoubleJump = false;
@@ -56,9 +52,6 @@ public class Level1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //inverts facing direction
-        //player.body.transform.rotation = Quaternion.Euler(player.body.transform.rotation.x, player.facing * -1, player.body.transform.rotation.z);
-
         if (player.isDead)
         {
             player.isDead = false;

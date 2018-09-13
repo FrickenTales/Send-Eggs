@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Level0 : MonoBehaviour {
 
-    private string LevelName = "Send Eggs";
-    private Text levelNameText;
     private PlayerController player;
     private WinObjective pan;
     private ButtonScript panButton;
@@ -17,11 +15,9 @@ public class Level0 : MonoBehaviour {
     void Start ()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
-        levelNameText = GameObject.Find("LevelName").GetComponent<Text>();
-        levelNameText.text = LevelName;
 
         //player base stats
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = transform.GetChild(0).GetComponent<PlayerController>();
         player.maxSpeed = 9;
         player.jumpForce = 11;
         player.canDoubleJump = false;
