@@ -1,21 +1,14 @@
 fileFormatVersion: 2
-guid: 7832cd9d98321d84b98d4d5d8bae57c2
+guid: d2f12699774e42d4196062b175c4ff19
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Button_01
-    100002: Button_Edge_01
-    100004: //RootNode
-    400000: Button_01
-    400002: Button_Edge_01
-    400004: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2300000: Button_01
-    2300002: Button_Edge_01
-    3300000: Button_01
-    3300002: Button_Edge_01
-    4300000: Button_Edge_01
-    4300002: Button_01
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: FryPan
   externalObjects: {}
   materials:
     importMaterials: 1

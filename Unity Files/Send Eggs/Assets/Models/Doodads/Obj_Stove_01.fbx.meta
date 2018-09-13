@@ -1,21 +1,14 @@
 fileFormatVersion: 2
-guid: 4c3fc8132d9d8e94db07a87580600974
+guid: 0a673f481cdfe764e8da809f4295e876
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Lever_01
-    100002: Lever_Base_01
-    100004: //RootNode
-    400000: Lever_01
-    400002: Lever_Base_01
-    400004: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2300000: Lever_01
-    2300002: Lever_Base_01
-    3300000: Lever_01
-    3300002: Lever_Base_01
-    4300000: Lever_01
-    4300002: Lever_Base_01
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Stove
   externalObjects: {}
   materials:
     importMaterials: 1
