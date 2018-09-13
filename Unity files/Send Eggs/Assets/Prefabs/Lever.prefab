@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114521755347608568}
   - component: {fileID: 95612621094613116}
   m_Layer: 0
-  m_Name: Lever 1
+  m_Name: Lever
   m_TagString: Lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,14 +209,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367327646568780}
-  m_Mesh: {fileID: 4300000, guid: 4c3fc8132d9d8e94db07a87580600974, type: 3}
+  m_Mesh: {fileID: 4300000, guid: aa53a827d27f2c3439e77a287e9c405c, type: 3}
 --- !u!33 &33926238982237900
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1148684108703406}
-  m_Mesh: {fileID: 4300002, guid: 4c3fc8132d9d8e94db07a87580600974, type: 3}
+  m_Mesh: {fileID: 4300002, guid: aa53a827d27f2c3439e77a287e9c405c, type: 3}
 --- !u!61 &61066445034166040
 BoxCollider2D:
   m_ObjectHideFlags: 1

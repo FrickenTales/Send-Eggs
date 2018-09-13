@@ -198,6 +198,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23981590204469958, guid: f0f2220aba00aca4f802062b1814ece7,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b55db67918c6945408739f60ecf2c008, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0f2220aba00aca4f802062b1814ece7, type: 2}
   m_IsPrefabParent: 0
@@ -795,6 +800,11 @@ Prefab:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 23166731996598986, guid: ae99408ea964c4e4a9a9e8e8b2c6fa3a,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab8b389d22375db479649c50925f1307, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae99408ea964c4e4a9a9e8e8b2c6fa3a, type: 2}
   m_IsPrefabParent: 0
@@ -1784,14 +1794,6 @@ CompositeCollider2D:
         Y: -10120001
       - X: 80120000
         Y: -10120001
-    - - X: -69880000
-        Y: 10120001
-      - X: -90120000
-        Y: 10120001
-      - X: -90120000
-        Y: -120000
-      - X: -69880000
-        Y: -120000
     - - X: 40120000
         Y: 10120001
       - X: -20120000
@@ -1804,6 +1806,14 @@ CompositeCollider2D:
         Y: -10120001
       - X: 40120000
         Y: -10120001
+    - - X: -69880000
+        Y: 10120001
+      - X: -90120000
+        Y: 10120001
+      - X: -90120000
+        Y: -120000
+      - X: -69880000
+        Y: -120000
     - - X: -59880000
         Y: -29880000
       - X: -100120000
@@ -1884,16 +1894,16 @@ CompositeCollider2D:
       - {x: 6.988, y: 3.012}
       - {x: 6.988, y: -1.0120001}
       - {x: 8.012, y: -1.0120001}
-    - - {x: -6.988, y: 1.0120001}
-      - {x: -9.012, y: 1.0120001}
-      - {x: -9.012, y: -0.012}
-      - {x: -6.988, y: -0.012}
     - - {x: 4.012, y: 1.0120001}
       - {x: -2.012, y: 1.0120001}
       - {x: -2.012, y: 0.012}
       - {x: -4.012, y: 0.012}
       - {x: -4.012, y: -1.0120001}
       - {x: 4.012, y: -1.0120001}
+    - - {x: -6.988, y: 1.0120001}
+      - {x: -9.012, y: 1.0120001}
+      - {x: -9.012, y: -0.012}
+      - {x: -6.988, y: -0.012}
     - - {x: -5.988, y: -2.988}
       - {x: -10.012, y: -2.988}
       - {x: -10.012, y: -4.012}
