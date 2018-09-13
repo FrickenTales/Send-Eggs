@@ -9,13 +9,10 @@ public class GM : MonoBehaviour {
 
     public bool testing;
 
-    public float levelColour;
     public int currentLevel;
     public int deathCount;
-    public Tilemap tilemap;
-    public Camera cam;
+    private Text testText;
     private Text deathCountText;
-    private GameObject levelManager;
     private Component currentLevelScript;
     private string levelScriptName;
     public WinScreen winScreen;
@@ -26,43 +23,35 @@ public class GM : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
-        levelColour = UnityEngine.Random.Range(0.0f, 1.0f);
-
+        testText = GameObject.Find("TestText").GetComponent<Text>();
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
+
+        if(transform.childCount > 0)
+            Destroy(transform.GetChild(0).gameObject);
 
         if (!testing)
         {
+            testText.enabled = false;
             levelScriptName = ("Level" + currentLevel);
-            levelManager = GameObject.Find("LevelManager");
-            levelManager.AddComponent(Type.GetType(levelScriptName));
-            currentLevelScript = levelManager.GetComponent(Type.GetType(levelScriptName));
+            Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
         }
+        else
+            testText.enabled = true;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         deathCountText.text = (deathCount + " Deaths");
-        tilemap.color = Color.HSVToRGB(levelColour, .38f, .66f);
-        cam.backgroundColor = Color.HSVToRGB(levelColour, .12f, .85f);
     }
 
     public void NewLevel()
     {       
         currentLevel++;
-        Destroy(currentLevelScript);
-        levelScriptName = ("Level" + currentLevel);
-        levelManager.AddComponent(Type.GetType(levelScriptName));
-        levelColour = UnityEngine.Random.Range(0.0f, 1.0f);
-        //levelManager.SetActive(false); levelManager.SetActive(true); // reset level manager to force script to enable, there's probably a batter way
-
-
-
+        Destroy(transform.GetChild(0).gameObject);
+        Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
 
         Invoke("ReleasePlayer", 1.4f);
-        //winObj.ready = true;
     }
 
     public void WinCanvas()

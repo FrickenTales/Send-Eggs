@@ -122,7 +122,6 @@ public class PlayerController : MonoBehaviour {
 
         if((grounded || !doubleJump) && Input.GetButtonDown("Jump"))
         {
-            //rb2d.AddForce(new Vector2(0, jumpForce));
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
 
             if (!doubleJump && !grounded)
