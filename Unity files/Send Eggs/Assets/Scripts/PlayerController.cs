@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb2d;
     public GameObject body;
     public float facing;
-    private Animator anim;
+    public Animator anim;
     private float animSpeed;
 
     private bool grounded;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 
         rb2d = GetComponent<Rigidbody2D>();
         body = transform.GetChild(0).gameObject;
-        anim = GetComponent<Animator>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         groundCheck = transform.GetChild(1).transform;
 
         Flip();
