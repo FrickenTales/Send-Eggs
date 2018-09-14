@@ -10,6 +10,7 @@ public class Level0 : MonoBehaviour {
     private WinObjective pan;
     private ButtonScript panButton;
     private Transform playerSpawn;
+    private LeverScript lever;
     private GM gm;
 
     // Use this for initialization
@@ -31,6 +32,11 @@ public class Level0 : MonoBehaviour {
         //pan button
         panButton = GameObject.FindGameObjectWithTag("PanButton").GetComponent<ButtonScript>();
         panButton.isOn = false;
+
+        //bridge lever
+        lever = GameObject.FindGameObjectWithTag("Lever").GetComponent<LeverScript>();
+        lever.toggles = false;
+        lever.isOn = false;
 
         //spawn point
         playerSpawn = GameObject.Find("SpawnPoint").transform;
