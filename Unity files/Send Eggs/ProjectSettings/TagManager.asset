@@ -8,6 +8,8 @@ TagManager:
   - PanButton
   - Enemy
   - Lever
+  - Bridge
+  - Stove
   layers:
   - Default
   - TransparentFX

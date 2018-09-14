@@ -19,9 +19,17 @@ public class ButtonScript : MonoBehaviour {
 	void Update ()
     {
         if (isOn)
+        {
             button.transform.localPosition = onState;
+            GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>().ready = true;
+            GameObject.FindGameObjectWithTag("Stove").GetComponent<StoveScript>().isOn = true;
+        }
         else
+        {
             button.transform.localPosition = offState;
+            GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>().ready = false;
+            GameObject.FindGameObjectWithTag("Stove").GetComponent<StoveScript>().isOn = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +39,6 @@ public class ButtonScript : MonoBehaviour {
             if (!isOn)
             {
                 isOn = true;
-                GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>().ready = true;
             }
         }
     }
