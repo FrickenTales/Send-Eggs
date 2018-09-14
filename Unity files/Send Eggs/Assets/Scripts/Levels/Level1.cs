@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Level1 : MonoBehaviour {
 
+    private Animator cartonanim;
     private PlayerController player;
     private WinObjective pan;
     private ButtonScript panButton;
@@ -14,6 +15,7 @@ public class Level1 : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        cartonanim = GameObject.Find("EggCarton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
@@ -47,6 +49,8 @@ public class Level1 : MonoBehaviour {
     {
         player.transform.position = playerSpawn.position;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        cartonanim.SetTrigger("SpawnEgg");
+        player.anim.SetTrigger("Spawn");
     }
 
     // Update is called once per frame

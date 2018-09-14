@@ -142,10 +142,10 @@ public class PlayerController : MonoBehaviour {
         facingRight = !facingRight;
 
         if (facingRight)
-            facing = 90;
+            facing = 0;
         else
-            facing = -90;
+            facing = 180;
 
-        body.transform.rotation = Quaternion.Euler(body.transform.rotation.x, facing, body.transform.rotation.z);
+        transform.rotation = Quaternion.Euler(transform.rotation.x, facing, transform.rotation.z);
     }
 }

@@ -26,11 +26,11 @@ public class GM : MonoBehaviour {
         testText = GameObject.Find("TestText").GetComponent<Text>();
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
 
-        if(transform.childCount > 0)
-            Destroy(transform.GetChild(0).gameObject);
-
         if (!testing)
         {
+            if (transform.childCount > 0)
+                Destroy(transform.GetChild(0).gameObject);
+
             testText.enabled = false;
             levelScriptName = ("Level" + currentLevel);
             Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
@@ -51,7 +51,7 @@ public class GM : MonoBehaviour {
         Destroy(transform.GetChild(0).gameObject);
         Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
 
-        Invoke("ReleasePlayer", 1.4f);
+        Invoke("ReleasePlayer", 1.2f);
     }
 
     public void WinCanvas()
