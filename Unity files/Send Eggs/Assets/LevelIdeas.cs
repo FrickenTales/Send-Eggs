@@ -18,7 +18,6 @@
  * Avoid the ghost - after winning and respawning, the ghost of your last run repeats the level too, the ghost kills you if you touch it
  * Bouncy egg - 100% bounce + fast jump
  * Move the level - controls now move the level around instead of the egg
- * Rolling egg - egg rolls instead of walking, left right movement has heavy drag
  * lever trap - lever kills you
  * one way lever
  * Invisible walls - level is a maze

@@ -403,10 +403,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1879248928410560, guid: 6f37fb2180667954a9e58c51ab92b7e2, type: 2}
-      propertyPath: m_TagString
-      value: Bridge
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f37fb2180667954a9e58c51ab92b7e2, type: 2}
   m_IsPrefabParent: 0
