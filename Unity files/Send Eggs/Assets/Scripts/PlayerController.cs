@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         rb2d = GetComponent<Rigidbody2D>();
-        body = transform.GetChild(0).gameObject;
+        body = transform.GetChild(0).GetChild(0).gameObject;
         anim = transform.GetChild(0).GetComponent<Animator>();
         groundCheck = transform.GetChild(1).transform;
 
