@@ -13,6 +13,7 @@ public class LevelVisual : MonoBehaviour {
     [Tooltip("use HSV XX,12,85 becuase it looks nice")]
     public Color levelBackgroundColour;
     private Camera cam;
+    private SpriteRenderer bgImage;
     private Tilemap tilemap;
 
     // Use this for initialization
@@ -22,9 +23,11 @@ public class LevelVisual : MonoBehaviour {
         levelNameText = GameObject.Find("LevelName").GetComponent<Text>();
         levelNameText.text = LevelName;
         tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
+        bgImage = GameObject.Find("BG Image").GetComponent<SpriteRenderer>();
 
         tilemap.color = levelTileColour;
         cam.backgroundColor = levelBackgroundColour;
+        bgImage.color = levelBackgroundColour;
     }
 	
 	// Update is called once per frame
