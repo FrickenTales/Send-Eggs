@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4733222464359086}
   m_Layer: 11
   m_Name: BrokenEgg
-  m_TagString: Untagged
+  m_TagString: Corpse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50580737416704478}
   - component: {fileID: 58008012476146778}
   - component: {fileID: 61405971840508254}
+  - component: {fileID: 114468389258627912}
   m_Layer: 11
   m_Name: EggTop
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   - component: {fileID: 50821890141106000}
   - component: {fileID: 58699252962318356}
   - component: {fileID: 61153147127227746}
+  - component: {fileID: 114116246071209144}
   m_Layer: 11
   m_Name: EggBtm
   m_TagString: Untagged
@@ -311,3 +313,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7951088, y: 0.162992}
   m_EdgeRadius: 0
+--- !u!114 &114116246071209144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1631847078170750}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae72ea1b5e80b2b4db34ba1f852c95dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 4
+  shrink: 0
+--- !u!114 &114468389258627912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1478688211918500}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae72ea1b5e80b2b4db34ba1f852c95dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 4
+  shrink: 0

@@ -16,14 +16,14 @@ public class PlayerController : MonoBehaviour {
     public bool isDead = false;
 
     private bool facingRight;
-    private Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
     public GameObject body;
     public float facing;
     public Animator anim;
-    private float animSpeed;
+    public float animSpeed;
 
-    private bool grounded;
-    private Transform groundCheck;
+    public bool grounded;
+    public Transform groundCheck;
     private Vector2 groundCap = new Vector2 (0.8f,0.35f);
     //private float groundRadius = 0.15f;
     public LayerMask whatisGround;
