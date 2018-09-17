@@ -441,7 +441,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2b9c9e65002c29644b2c2efb64603515, type: 2}
+  - {fileID: 2100000, guid: d6743972f1f166f45ae6cfd3c2e9c357, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -583,6 +583,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ab8b389d22375db479649c50925f1307, type: 2}
+    - target: {fileID: 400000, guid: aa53a827d27f2c3439e77a287e9c405c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa53a827d27f2c3439e77a287e9c405c, type: 3}
   m_IsPrefabParent: 0
