@@ -17,22 +17,12 @@ public class GM : MonoBehaviour {
     //private string levelScriptName;
     public WinScreen winScreen;
 
-    public GameObject[] mainAssets = new GameObject[7];
-
     public bool holdPlayer = false;
 
 
 	// Use this for initialization
 	void Start ()
     {
-        mainAssets[0] = GameObject.Find("Button");
-        mainAssets[1] = GameObject.Find("SpikesGroup");
-        mainAssets[2] = GameObject.Find("Lever");
-        mainAssets[3] = GameObject.Find("Stove");
-        mainAssets[4] = GameObject.Find("EggCarton");
-        mainAssets[5] = GameObject.Find("Frypan");
-        mainAssets[6] = GameObject.Find("Bridge");
-
         testText = GameObject.Find("TestText").GetComponent<Text>();
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
 
@@ -64,11 +54,6 @@ public class GM : MonoBehaviour {
         Destroy(transform.GetChild(0).gameObject);
         DestroyAllObjects();
         Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
-
-        foreach(GameObject asset in mainAssets)
-        {
-            asset.SetActive(true);
-        }
 
         Invoke("ReleasePlayer", 1.2f);
     }

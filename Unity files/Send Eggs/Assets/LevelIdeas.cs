@@ -1,15 +1,14 @@
 ﻿/*
  * Level Ideas
  * 
- ** Default Level
- ** Inverted controls
- ** Egg with legs
+ * Default Level
+ * Inverted controls
  * Scared pan - pan keeps running away from the player
  * Egg carton - play as the carton, eggs fall out when you jump
  * Click buttons - buttons/levers have to actived with the mouse;
  * First or Third person Egg
  * Egg golf - Fling egg with mouse in golf game style
- ** VVVVVV style - Jumping inverts gravity
+ * VVVVVV style - Jumping inverts gravity
  * Left 4 Egg - zombie eggs roam the level that the player can shoot
  * Invisible level - no level, only colliders
  * Invisible egg - player is invisible, has particles on his feet maybe
@@ -24,6 +23,5 @@
  * Invisible walls - level is a maze
  * Mouse egg - Egg is stuck to curser;
  * Spikes success - touch all the spikes
- * On Screen buttons for controls
  * 
  */

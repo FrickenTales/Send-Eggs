@@ -5557,7 +5557,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1bb85895285e34eac01754b42f03fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   testing: 1
+=======
+  testing: 0
+>>>>>>> parent of d3ea811... Asset activation
   currentLevel: 0
   deathCount: 0
   winScreen: {fileID: 946067969}
