@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Level1 : MonoBehaviour {
 
+    private GameObject shell;
     private Animator cartonanim;
     private PlayerController player;
     private WinObjective pan;
@@ -16,6 +17,7 @@ public class Level1 : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.Find("EggCarton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
@@ -46,6 +48,7 @@ public class Level1 : MonoBehaviour {
 
     void KillPlayer()
     {
+        Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
         Start();
         //SpawnPlayer();

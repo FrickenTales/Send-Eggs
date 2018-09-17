@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Level0 : MonoBehaviour {
+public class LevelVVVVVV : MonoBehaviour  
+{
 
     private GameObject shell;
     private Animator cartonanim;
@@ -15,7 +16,7 @@ public class Level0 : MonoBehaviour {
     private GM gm;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.Find("EggCarton").GetComponent<Animator>();
@@ -24,8 +25,9 @@ public class Level0 : MonoBehaviour {
         //player base stats
         player = transform.GetChild(0).GetComponent<PlayerController>();
         player.maxSpeed = 9;
-        player.jumpForce = 11;
+        player.jumpForce = 5;
         player.canDoubleJump = false;
+        player.rb2d.gravityScale = 2;
 
         //pan
         pan = GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>();
@@ -44,7 +46,7 @@ public class Level0 : MonoBehaviour {
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
         SpawnPlayer();
-	}
+    }
 
     void KillPlayer()
     {
@@ -61,14 +63,31 @@ public class Level0 : MonoBehaviour {
         cartonanim.SetTrigger("SpawnEgg");
         player.anim.SetTrigger("Spawn");
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
+        if (player.grounded && Input.GetButtonDown("Jump"))
+        {
+            player.rb2d.gravityScale = -player.rb2d.gravityScale;
+            player.jumpForce = -player.jumpForce;
+        }
+
+        if (player.rb2d.gravityScale < 0)
+        {
+            player.groundCheck.localPosition = new Vector3(0, 0.82f, 0);
+            player.anim.SetFloat("RollSpeed", -player.animSpeed);
+        }
+        else
+        {
+            player.groundCheck.localPosition = new Vector3(0, 0.021f, 0);
+            player.anim.SetFloat("RollSpeed", player.animSpeed);
+        }
+
         if (player.isDead)
         {
             player.isDead = false;
             KillPlayer();
         }
-	}
+    }
 }

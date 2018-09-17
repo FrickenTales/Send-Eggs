@@ -14,7 +14,7 @@ public class GM : MonoBehaviour {
     private Text testText;
     private Text deathCountText;
     private Component currentLevelScript;
-    private string levelScriptName;
+    //private string levelScriptName;
     public WinScreen winScreen;
 
     public bool holdPlayer = false;
@@ -32,11 +32,14 @@ public class GM : MonoBehaviour {
                 Destroy(transform.GetChild(0).gameObject);
 
             testText.enabled = false;
-            levelScriptName = ("Level" + currentLevel);
+            //levelScriptName = ("Level" + currentLevel);
             Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
         }
         else
+        {
+            currentLevel = 999;
             testText.enabled = true;
+        }
     }
 	
 	// Update is called once per frame
@@ -49,6 +52,7 @@ public class GM : MonoBehaviour {
     {       
         currentLevel++;
         Destroy(transform.GetChild(0).gameObject);
+        DestroyAllObjects();
         Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
 
         Invoke("ReleasePlayer", 1.2f);
@@ -62,5 +66,15 @@ public class GM : MonoBehaviour {
     void ReleasePlayer()
     {
         holdPlayer = false;
+    }
+
+    void DestroyAllObjects()
+    {
+        var gameObjects = GameObject.FindGameObjectsWithTag("Corpse");
+
+        for (var i = 0; i < gameObjects.Length; i++)
+        {
+            Destroy(gameObjects[i]);
+        }
     }
 }
