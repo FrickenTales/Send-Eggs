@@ -5506,10 +5506,13 @@ MonoBehaviour:
   testing: 1
 =======
   testing: 0
+<<<<<<< HEAD
 >>>>>>> parent of d3ea811... Asset activation
 =======
   testing: 0
 >>>>>>> parent of 875d975... Level Clicky Update
+=======
+>>>>>>> parent of d3ea811... Asset activation
   currentLevel: 0
   deathCount: 0
   winScreen: {fileID: 946067969}
