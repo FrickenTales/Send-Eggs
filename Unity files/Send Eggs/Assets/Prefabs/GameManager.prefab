@@ -69,4 +69,6 @@ MonoBehaviour:
   - {fileID: 1993422842903018, guid: 3f7d0cc5beee76f419e0ad1bacc23bc9, type: 2}
   - {fileID: 1597454500388874, guid: 00ee7ab0fa8997149b4866e618772a07, type: 2}
   - {fileID: 1967774596395994, guid: c5e2a0197fc532c42ab5169dae7f068a, type: 2}
+  - {fileID: 1354335285696892, guid: 5a4aff63e865012419eab2d236f8f90e, type: 2}
+  - {fileID: 1781625013432186, guid: 92774d2f80a790c4a8a2427fd5bd50cd, type: 2}
   holdPlayer: 0
