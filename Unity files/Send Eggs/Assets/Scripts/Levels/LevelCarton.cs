@@ -19,7 +19,7 @@ public class LevelCarton : MonoBehaviour {
     {
         if (first)
         {
-            oldCarton = GameObject.Find("EggCarton");
+            oldCarton = GameObject.Find("EggCarton_Master");
             oldCarton.SetActive(false);
         }
         gm = GameObject.Find("GameManager").GetComponent<GM>();

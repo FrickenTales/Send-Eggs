@@ -12,6 +12,7 @@ TagManager:
   - Stove
   - Corpse
   - SpawnPoint
+  - Carton
   layers:
   - Default
   - TransparentFX

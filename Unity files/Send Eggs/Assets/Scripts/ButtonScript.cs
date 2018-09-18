@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour {
 
-    private Vector3 onState = new Vector3(0,5,0);
-    private Vector3 offState = new Vector3(0, 32, 0);
+    private Vector3 onState = new Vector3(0,0.32f,0);
+    private Vector3 offState = new Vector3(0, 0.87f, 0);
     private GameObject button;
     public bool isOn = false;
 
 	// Use this for initialization
 	void Start ()
     {
-        button = transform.GetChild(0).GetChild(0).gameObject;
+        button = transform.GetChild(0).gameObject;
 	}
 	
 	// Update is called once per frame
