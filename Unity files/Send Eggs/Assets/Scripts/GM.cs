@@ -18,6 +18,7 @@ public class GM : MonoBehaviour {
     public WinScreen winScreen;
 
     public GameObject[] mainAssets = new GameObject[7];
+    public GameObject[] levels;
 
     public bool holdPlayer = false;
 
@@ -25,13 +26,13 @@ public class GM : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        mainAssets[0] = GameObject.Find("Button");
-        mainAssets[1] = GameObject.Find("SpikesGroup");
-        mainAssets[2] = GameObject.Find("Lever");
-        mainAssets[3] = GameObject.Find("Stove");
-        mainAssets[4] = GameObject.Find("EggCarton");
-        mainAssets[5] = GameObject.Find("Frypan");
-        mainAssets[6] = GameObject.Find("Bridge");
+        mainAssets[0] = GameObject.Find("Button_Master");
+        mainAssets[1] = GameObject.Find("Spikes_Master");
+        mainAssets[2] = GameObject.Find("Lever_Master");
+        mainAssets[3] = GameObject.Find("Stove_Master");
+        mainAssets[4] = GameObject.Find("EggCarton_Master");
+        mainAssets[5] = GameObject.Find("Frypan_Master");
+        mainAssets[6] = GameObject.Find("Bridge_Master");
 
         testText = GameObject.Find("TestText").GetComponent<Text>();
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
@@ -43,7 +44,8 @@ public class GM : MonoBehaviour {
 
             testText.enabled = false;
             //levelScriptName = ("Level" + currentLevel);
-            Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
+            //Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
+            Instantiate(levels[currentLevel], transform);
         }
         else
         {

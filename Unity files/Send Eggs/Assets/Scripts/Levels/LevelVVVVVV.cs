@@ -19,7 +19,7 @@ public class LevelVVVVVV : MonoBehaviour
     void Start()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
-        cartonanim = GameObject.Find("EggCarton").GetComponent<Animator>();
+        cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
