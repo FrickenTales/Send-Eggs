@@ -17,8 +17,11 @@ public class LevelCarton : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        oldCarton = GameObject.Find("EggCarton");
-        oldCarton.SetActive(false);
+        if (first)
+        {
+            oldCarton = GameObject.Find("EggCarton");
+            oldCarton.SetActive(false);
+        }
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
