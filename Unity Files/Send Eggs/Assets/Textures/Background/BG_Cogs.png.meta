@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: b2917dd3f0497d249a42f026d3b068a7
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BG_Cog_01
+    21300002: BG_Cog_02
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -38,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -135,11 +137,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BG_Cog_01
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 113
+        width: 854
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d9cf06b39134241a957c9dd566c85a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Cog_02
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 55
+        width: 977
+        height: 977
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429a89efc95e22746b073f039648c75d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a5874a8329e829443a223ad7042b17ea
     vertices: []
     indices: 
     edges: []
