@@ -14,11 +14,15 @@ public class LevelClicky : MonoBehaviour
     private LeverClickScript lever;
     private GM gm;
 
+    private bool first = true;
+    private GameObject oldButton;
+    private GameObject oldLever;
+
     // Use this for initialization
     void Start()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
-        cartonanim = GameObject.Find("EggCarton").GetComponent<Animator>();
+        cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
@@ -44,6 +48,15 @@ public class LevelClicky : MonoBehaviour
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
         SpawnPlayer();
+
+        if (first)
+        {
+            oldButton = GameObject.Find("Button_Master");
+            oldLever = GameObject.Find("Lever_Master");
+            oldButton.SetActive(false);
+            oldLever.SetActive(false);
+            first = false;
+        }
     }
 
     void KillPlayer()
