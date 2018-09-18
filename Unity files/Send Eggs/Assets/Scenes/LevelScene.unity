@@ -370,6 +370,10 @@ Prefab:
   serializedVersion: 2
   m_Modification:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
     m_TransformParent: {fileID: 0}
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
@@ -408,8 +412,11 @@ Prefab:
 =======
       value: 10
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
 >>>>>>> 63cdbcd5eb03ca27896af6a5856633ccd24f03ef
+=======
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
       objectReference: {fileID: 0}
@@ -943,6 +950,7 @@ Transform:
   m_PrefabInternal: {fileID: 40248125}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &571852728
 Prefab:
   m_ObjectHideFlags: 0
@@ -987,6 +995,8 @@ Prefab:
   m_IsPrefabParent: 0
 =======
 >>>>>>> parent of d3ea811... Asset activation
+=======
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 --- !u!1 &684443496
@@ -5575,8 +5585,11 @@ MonoBehaviour:
 >>>>>>> parent of d3ea811... Asset activation
   currentLevel: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   currentLevel: 2
 >>>>>>> 63cdbcd5eb03ca27896af6a5856633ccd24f03ef
+=======
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
   deathCount: 0
@@ -5591,8 +5604,11 @@ Prefab:
 =======
     m_TransformParent: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1182995755}
 >>>>>>> 63cdbcd5eb03ca27896af6a5856633ccd24f03ef
+=======
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
     m_Modifications:
@@ -5611,12 +5627,24 @@ Prefab:
     - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
       propertyPath: m_LocalRotation.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
       propertyPath: m_LocalRotation.y
       objectReference: {fileID: 0}
     - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
       propertyPath: m_LocalRotation.z
+=======
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
       value: 0
       objectReference: {fileID: 0}
@@ -5636,6 +5664,10 @@ Prefab:
     - target: {fileID: 4061345056735496, guid: cee6beb0748f741429f2071e695f7e2c, type: 2}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      value: 9
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
       value: 9
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
@@ -5875,6 +5907,10 @@ GameObject:
   - component: {fileID: 1759647031}
   m_Layer: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  m_Name: Grid
+>>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
 =======
   m_Name: Grid
 >>>>>>> parent of 63cdbcd... Merge branch 'master' of https://github.com/FrickenTales/SendEggs
