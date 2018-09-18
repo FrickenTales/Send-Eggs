@@ -16,12 +16,12 @@ public class GM : MonoBehaviour {
     private Component currentLevelScript;
     //private string levelScriptName;
     public WinScreen winScreen;
+    private GameObject wholeLevel;
 
     public GameObject[] mainAssets = new GameObject[7];
     public GameObject[] levels;
 
     public bool holdPlayer = false;
-
 
 	// Use this for initialization
 	void Start ()
@@ -33,6 +33,9 @@ public class GM : MonoBehaviour {
         mainAssets[4] = GameObject.Find("EggCarton_Master");
         mainAssets[5] = GameObject.Find("Frypan_Master");
         mainAssets[6] = GameObject.Find("Bridge_Master");
+
+        winScreen = GameObject.Find("LevelCompleteCanvas").GetComponent<WinScreen>();
+        wholeLevel = GameObject.Find("Level_Layout");
 
         testText = GameObject.Find("TestText").GetComponent<Text>();
         deathCountText = GameObject.Find("DeathCounter").GetComponent<Text>();
@@ -61,13 +64,15 @@ public class GM : MonoBehaviour {
     }
 
     public void NewLevel()
-    {       
+    {
+        wholeLevel.transform.position = new Vector3(0, 0, 0);
         currentLevel++;
         Destroy(transform.GetChild(0).gameObject);
         DestroyAllObjects();
-        Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
+        //Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
+        Instantiate(levels[currentLevel], transform);
 
-        foreach(GameObject asset in mainAssets)
+        foreach (GameObject asset in mainAssets)
         {
             asset.SetActive(true);
         }
