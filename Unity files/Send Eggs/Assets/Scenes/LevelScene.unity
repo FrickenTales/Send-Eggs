@@ -1203,6 +1203,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114004851474039308, guid: 8dc44a7ecdc9f864e9bc819750a1f76c,
+        type: 2}
+      propertyPath: levels.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4535317671232896, guid: 8dc44a7ecdc9f864e9bc819750a1f76c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1237,8 +1242,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114004851474039308, guid: 8dc44a7ecdc9f864e9bc819750a1f76c,
         type: 2}
+<<<<<<< HEAD
       propertyPath: testing
       value: 1
+=======
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 946067969}
+    - target: {fileID: 114004851474039308, guid: 8dc44a7ecdc9f864e9bc819750a1f76c,
+        type: 2}
+      propertyPath: levels.Array.data[5]
+      value: 
+      objectReference: {fileID: 1354335285696892, guid: 5a4aff63e865012419eab2d236f8f90e,
+        type: 2}
+    - target: {fileID: 114004851474039308, guid: 8dc44a7ecdc9f864e9bc819750a1f76c,
+        type: 2}
+      propertyPath: testing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004851474039308, guid: 8dc44a7ecdc9f864e9bc819750a1f76c,
+        type: 2}
+      propertyPath: currentLevel
+      value: 5
+>>>>>>> 6610871e151b22b2e35c8b1c7c2fc4a7d53985d1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dc44a7ecdc9f864e9bc819750a1f76c, type: 2}

@@ -13,6 +13,7 @@ TextureImporter:
     21300016: Lever_Base
     21300018: Pan
     21300020: Stove
+    21300022: Yolk
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -363,6 +364,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5f94eaa627d8945488fb80627b304065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yolk
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1527
+        width: 480
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1f2fef05526624ead3b3f80df548d5
       vertices: []
       indices: 
       edges: []

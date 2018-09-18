@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4363202287569108}
   - component: {fileID: 61744362830225106}
-  - component: {fileID: 114089131276918336}
+  - component: {fileID: 114687953946076012}
   - component: {fileID: 61380720498938670}
   m_Layer: 0
   m_Name: Button
@@ -112,8 +112,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726817047056168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22, y: 5.99, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4151638647408724}
@@ -183,7 +183,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 144bcded97bc1e044a6184b456c13e00, type: 2}
+  - {fileID: 2100000, guid: b55db67918c6945408739f60ecf2c008, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,7 +267,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.89, y: 0.82}
   m_EdgeRadius: 0
---- !u!114 &114089131276918336
+--- !u!114 &114687953946076012
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
