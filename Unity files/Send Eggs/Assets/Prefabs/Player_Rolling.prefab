@@ -536,9 +536,13 @@ MonoBehaviour:
   canDoubleJump: 0
   maxFallSpeed: -16
   isDead: 0
+  rb2d: {fileID: 0}
   body: {fileID: 0}
   facing: 0
   anim: {fileID: 0}
+  animSpeed: 0
+  grounded: 0
+  groundCheck: {fileID: 0}
   whatisGround:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294964735

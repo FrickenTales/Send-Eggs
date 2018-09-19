@@ -2,46 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelMoveLevel : MonoBehaviour {
+public class LevelTwoHands : MonoBehaviour {
 
     private GameObject shell;
     private Animator cartonanim;
-    private PlayerController player;
+    private PlayerControllerTH player;
     private WinObjective pan;
     private ButtonScript panButton;
     private Transform playerSpawn;
     private LeverScript lever;
     private GM gm;
 
-    public GameObject wholeLevel;
-    private float xPos;
-    private float yPos;
+    private bool pressingD;
+    private bool pressingA;
+    private bool pressingW;
+    private bool pressingRight;
+    private bool pressingLeft;
+    private bool pressingUp;
 
     // Use this for initialization
-    void Awake()
-    {
-
-    }
-
-    private void Start()
-    {
-        gm = GameObject.Find("GameManager").GetComponent<GM>();
-        gm.ResetAssets();
-        wholeLevel = GameObject.Find("Level_Layout");
-        player = transform.GetChild(0).GetComponent<PlayerController>();
-        Invoke("Begin", 0.1f);
-    }
-
-    void Begin()
+    void Start()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
-        
+        gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
-        player.maxSpeed = 0;
-        player.jumpForce = 0;
-        player.maxFallSpeed = -18;
+        player = transform.GetChild(0).GetComponent<PlayerControllerTH>();
+        player.maxSpeed = 9;
+        player.jumpForce = 11;
         player.canDoubleJump = false;
 
         //pan
@@ -60,16 +49,14 @@ public class LevelMoveLevel : MonoBehaviour {
         //spawn point
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
-        Invoke("SpawnPlayer", 0.05f);
+        SpawnPlayer();
     }
 
     void KillPlayer()
     {
         Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
-        xPos = 0;
-        yPos = 0;
-        Begin();
+        Start();
         //SpawnPlayer();
     }
 
@@ -84,13 +71,54 @@ public class LevelMoveLevel : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        wholeLevel.transform.position = new Vector3(xPos, yPos, 0);
+        if (Input.GetKey(KeyCode.D))
+            pressingD = true;
+        else
+            pressingD = false;
 
-        if (!gm.holdPlayer)
+        if (Input.GetKey(KeyCode.W))
+            pressingW = true;
+        else
+            pressingW = false;
+
+        if (Input.GetKey(KeyCode.A))
+            pressingA = true;
+        else
+            pressingA = false;
+
+        if (Input.GetKey(KeyCode.RightArrow))
+            pressingRight = true;
+        else
+            pressingRight = false;
+
+        if (Input.GetKey(KeyCode.UpArrow))
+            pressingUp = true;
+        else
+            pressingUp = false;
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+            pressingLeft = true;
+        else
+            pressingLeft = false;
+
+        if((pressingD && pressingRight) || (pressingA && pressingLeft))
         {
-            xPos += (Input.GetAxis("Horizontal") * Time.deltaTime * 10);
-            yPos += (Input.GetAxis("Vertical") * Time.deltaTime * 20);
+            player.canMove = true;
         }
+        else
+        {
+            player.canMove = false;
+        }
+
+        if(pressingW && pressingUp)
+        {
+            player.canJump = true;
+        }
+        else
+        {
+            player.canJump = false;
+        }
+
 
         if (player.isDead)
         {
@@ -99,4 +127,3 @@ public class LevelMoveLevel : MonoBehaviour {
         }
     }
 }
-

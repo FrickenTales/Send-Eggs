@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerCarton : MonoBehaviour {
+public class PlayerControllerTH : MonoBehaviour {
+
+    public bool walks;
 
     public float maxSpeed;
     public float jumpForce;
     public bool canDoubleJump;
     public float maxFallSpeed;
-    private float move;
+    public float move;
     private bool willDie = false;
 
     public bool isDead = false;
 
     private bool facingRight;
-    public GameObject husk;
-    public Transform huskSpawn;
     public Rigidbody2D rb2d;
     public GameObject body;
     public float facing;
@@ -24,8 +24,12 @@ public class PlayerControllerCarton : MonoBehaviour {
 
     public bool grounded;
     public Transform groundCheck;
-    private Vector2 groundCap = new Vector2(2.5f, 0.35f);
+    private Vector2 groundCap = new Vector2(0.8f, 0.35f);
+    //private float groundRadius = 0.15f;
     public LayerMask whatisGround;
+
+    public bool canMove = true;
+    public bool canJump = true;
 
     private bool doubleJump = false;
 
@@ -35,18 +39,20 @@ public class PlayerControllerCarton : MonoBehaviour {
     void Awake()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
-        husk = Resources.Load("Player_Husk") as GameObject;
-        huskSpawn = transform.GetChild(2).gameObject.transform;
 
         rb2d = GetComponent<Rigidbody2D>();
         body = transform.GetChild(0).GetChild(0).gameObject;
         anim = transform.GetChild(0).GetComponent<Animator>();
         groundCheck = transform.GetChild(1).transform;
+
+        Flip();
     }
 
 
     void FixedUpdate()
     {
+        //grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatisGround);
+        //grounded = Physics2D.OverlapCapsule(groundCheck.position, groundCap, CapsuleDirection2D.Horizontal, 90, whatisGround);
         grounded = Physics2D.OverlapBox(groundCheck.position, groundCap, 0, whatisGround);
 
         if (rb2d.velocity.y < maxFallSpeed)
@@ -63,36 +69,40 @@ public class PlayerControllerCarton : MonoBehaviour {
 
         if (!gm.holdPlayer)
         {
-            move = Input.GetAxis("Horizontal");
+            if (rb2d.velocity.x == 0)
+            {
+                move = 0;
+            }
 
-            rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+            if (canMove)
+            {
+                move = Mathf.Lerp(move, Input.GetAxis("Horizontal"), Time.deltaTime * 2.3f);
+            }
+            else
+            {
+                move = Mathf.Lerp(move, 0, Time.deltaTime * 2.3f);
+            }
         }
 
-        if (Mathf.Abs(rb2d.velocity.x) < 0.5f)
-            anim.SetBool("IsIdle", true);
-        else
-            anim.SetBool("IsIdle", false);
+        rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
 
+        if (grounded)
+        {
+            animSpeed = rb2d.velocity.x / 4.5f;
+        }
+        else
+        {
+            animSpeed = Mathf.Lerp(animSpeed, rb2d.velocity.x / 3, Time.deltaTime * .7f);
+        }
+
+        anim.SetFloat("RollSpeed", animSpeed);
     }
 
     void Update()
     {
-
-        if (!canDoubleJump)
+        if ((grounded && canJump) && Input.GetButton("Jump"))
         {
-            doubleJump = true;
-        }
-
-        if ((grounded || !doubleJump) && Input.GetButtonDown("Jump"))
-        {
-            anim.SetTrigger("Open");
-            GameObject shell = Instantiate(husk, huskSpawn.position, husk.transform.rotation);
-            Rigidbody2D shellrb2d = shell.GetComponent<Rigidbody2D>();
-            shellrb2d.velocity = new Vector2(Random.Range(-2, 2), 8);
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
-
-            if (!doubleJump && !grounded)
-                doubleJump = true;
         }
     }
 
@@ -102,5 +112,17 @@ public class PlayerControllerCarton : MonoBehaviour {
         {
             isDead = true;
         }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+
+        if (facingRight)
+            facing = 0;
+        else
+            facing = 180;
+
+        transform.rotation = Quaternion.Euler(transform.rotation.x, facing, transform.rotation.z);
     }
 }

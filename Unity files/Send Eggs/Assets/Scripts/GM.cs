@@ -65,6 +65,7 @@ public class GM : MonoBehaviour {
 
     public void NewLevel()
     {
+        ResetAssets();
         wholeLevel.transform.position = new Vector3(0, 0, 0);
         currentLevel++;
         Destroy(transform.GetChild(0).gameObject);
@@ -72,12 +73,15 @@ public class GM : MonoBehaviour {
         //Instantiate(Resources.Load("Levels/Level_" + currentLevel), transform);
         Instantiate(levels[currentLevel], transform);
 
+        Invoke("ReleasePlayer", 1.2f);
+    }
+
+    public void ResetAssets()
+    {
         foreach (GameObject asset in mainAssets)
         {
             asset.SetActive(true);
         }
-
-        Invoke("ReleasePlayer", 1.2f);
     }
 
     public void WinCanvas()

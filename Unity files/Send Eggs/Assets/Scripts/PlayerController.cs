@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     public bool canDoubleJump;
     public float maxFallSpeed;
-    private float move;
+    public float move;
     private bool willDie = false;
 
     public bool isDead = false;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
     private GM gm;
 
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
@@ -71,12 +71,12 @@ public class PlayerController : MonoBehaviour {
                 move = Input.GetAxis("Horizontal");
 
                 rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
-
-                if (move > 0 && !facingRight)
-                    Flip();
-                else if (move < 0 && facingRight)
-                    Flip();
             }
+
+            if (move > 0 && !facingRight)
+                Flip();
+            else if (move < 0 && facingRight)
+                Flip();
 
             if (Mathf.Abs(rb2d.velocity.x) < 0.5f)
                 anim.SetBool("IsIdle", true);
@@ -93,10 +93,9 @@ public class PlayerController : MonoBehaviour {
                 }
 
                 move = Mathf.Lerp(move, Input.GetAxis("Horizontal"), Time.deltaTime * 2.3f);
-
-                rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
-
             }
+
+            rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
 
             if (grounded)
             {
