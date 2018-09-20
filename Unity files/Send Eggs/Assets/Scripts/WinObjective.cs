@@ -7,8 +7,11 @@ public class WinObjective : MonoBehaviour {
     public bool ready = false;
     private GM gm;
 
-	// Use this for initialization
-	void Start ()
+    private float safetyWait = 0;
+    private float safety = 2;
+
+    // Use this for initialization
+    void Start ()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 	}
@@ -19,17 +22,21 @@ public class WinObjective : MonoBehaviour {
 
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
             if (ready)
             {
-                gm.holdPlayer = true;
-                ready = false;
-                print("win");
-                gm.WinCanvas();
-                Invoke("TellGM", 0.7f);
+                if (Time.time > safetyWait)
+                {
+                    safetyWait = Time.time + safety;
+                    ready = false;
+                    gm.holdPlayer = true;
+                    print("win");
+                    gm.WinCanvas();
+                    Invoke("TellGM", 0.7f);
+                }
             }
         }
     }

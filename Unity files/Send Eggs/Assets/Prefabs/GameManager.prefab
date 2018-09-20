@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1bb85895285e34eac01754b42f03fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testing: 0
+  testing: 1
   currentLevel: 0
   deathCount: 0
   winScreen: {fileID: 0}
@@ -69,4 +69,9 @@ MonoBehaviour:
   - {fileID: 1993422842903018, guid: 3f7d0cc5beee76f419e0ad1bacc23bc9, type: 2}
   - {fileID: 1597454500388874, guid: 00ee7ab0fa8997149b4866e618772a07, type: 2}
   - {fileID: 1967774596395994, guid: c5e2a0197fc532c42ab5169dae7f068a, type: 2}
+  - {fileID: 1354335285696892, guid: 5a4aff63e865012419eab2d236f8f90e, type: 2}
+  - {fileID: 1685445085417628, guid: 30a4640531622af41a86c1d608523ef2, type: 2}
+  - {fileID: 1720903157453546, guid: 1add4da007ad60640b2288d1612d4eee, type: 2}
+  - {fileID: 1951387423626176, guid: 0a85b19b359867d4c8894982edad322c, type: 2}
+  - {fileID: 1781625013432186, guid: 92774d2f80a790c4a8a2427fd5bd50cd, type: 2}
   holdPlayer: 0

@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4977603115332500}
   - component: {fileID: 50829160316266772}
   - component: {fileID: 58970621730595060}
+  - component: {fileID: 114515786416172076}
   m_Layer: 11
   m_Name: Player_Husk
   m_TagString: Corpse
@@ -489,3 +490,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114515786416172076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940295414657728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0c8df8abf57084d8b30b027dd5f7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
