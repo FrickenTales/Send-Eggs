@@ -17,12 +17,12 @@
  * Keep your hat on - physics hat on eggs head, egg dies if it falls off
  ** Speedrun Level - beat the level on a very short timer
  * Avoid the ghost - after winning and respawning, the ghost of your last run repeats the level too, the ghost kills you if you touch it
- * Bouncy egg - 100% bounce + fast jump
+ ** Bouncy egg - 100% bounce + fast jump
  ** Move the level - controls now move the level around instead of the egg
  * lever trap - lever kills you
  * one way lever
  * Invisible walls - level is a maze
- * Mouse egg - Egg is stuck to curser;
+ ** Mouse egg - Egg is stuck to curser;
  * Spikes success - touch all the spikes
  * On Screen buttons for controls
  ** TwoHands - wasd and arrows together

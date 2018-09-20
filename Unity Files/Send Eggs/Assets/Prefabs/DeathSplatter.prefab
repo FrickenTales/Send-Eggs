@@ -90,8 +90,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1582396384235872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.837729, y: 3.961903, z: 0.59716916}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.8, y: 2.1, z: 0.59716916}
+  m_LocalScale: {x: 0.41293997, y: 0.41294008, z: 0.41294008}
   m_Children:
   - {fileID: 4897131972192324}
   - {fileID: 4873181347642816}
@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1905646409086338}
   m_LocalRotation: {x: -0.7071068, y: -0.000000014901161, z: 0.000000014901161, w: 0.7071068}
-  m_LocalPosition: {x: 3.4730563, y: -1.61, z: -3.5971692}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6628523, y: 0.66285276, z: 0.66285276}
   m_Children:
   - {fileID: 4633852380866430}
@@ -132,8 +132,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1449585978187658}
   m_LocalRotation: {x: -0, y: -0, z: 0.38026348, w: 0.9248782}
-  m_LocalPosition: {x: 3.567729, y: -0.831903, z: -3.5971692}
-  m_LocalScale: {x: 0.66285217, y: 0.66285217, z: 0.6628523}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4436435801249702}
   m_RootOrder: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
   mEdgePointMasses:
   - mMass: 2.89
     mInverseMass: 1
-    mPosition: {x: -2.533952, y: 2.9979374}
+    mPosition: {x: -1.5874097, y: 2.0177283}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -398,7 +398,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.5358531, y: 3.2757857}
+    mPosition: {x: -1.5885942, y: 2.1908207}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.4384062, y: 3.6433265}
+    mPosition: {x: -1.5278872, y: 2.4197893}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -418,7 +418,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.148414, y: 4.0364037}
+    mPosition: {x: -1.3472295, y: 2.6646662}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -428,7 +428,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.7444365, y: 4.330104}
+    mPosition: {x: -1.0955617, y: 2.8476343}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -438,7 +438,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.3594432, y: 4.3799534}
+    mPosition: {x: -0.8557209, y: 2.878689}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.0036142, y: 4.374483}
+    mPosition: {x: -0.63404846, y: 2.875281}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -458,7 +458,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.74217033, y: 4.2805047}
+    mPosition: {x: -0.4711756, y: 2.8167353}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.33806515, y: 3.9942977}
+    mPosition: {x: -0.2194283, y: 2.6384354}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -478,7 +478,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.07259321, y: 3.5455577}
+    mPosition: {x: -0.054046154, y: 2.3588817}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -488,7 +488,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: 0.0026955605, y: 3.1544056}
+    mPosition: {x: -0.0071433187, y: 2.1152039}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -498,7 +498,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.048303604, y: 2.817783}
+    mPosition: {x: -0.038914382, y: 1.9054966}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.18583155, y: 2.5036664}
+    mPosition: {x: -0.124590814, y: 1.7098099}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -518,7 +518,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.37944555, y: 2.2313824}
+    mPosition: {x: -0.24520731, y: 1.5401839}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -528,7 +528,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.6608772, y: 2.030186}
+    mPosition: {x: -0.4205322, y: 1.4148436}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -538,7 +538,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.0158763, y: 1.872544}
+    mPosition: {x: -0.6416875, y: 1.3166367}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -548,7 +548,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.4357812, y: 1.8581634}
+    mPosition: {x: -0.9032775, y: 1.3076779}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -558,7 +558,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.8334012, y: 1.9862642}
+    mPosition: {x: -1.1509845, y: 1.3874815}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -568,7 +568,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.16836, y: 2.2198043}
+    mPosition: {x: -1.3596554, y: 1.5329709}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -578,7 +578,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.4790487, y: 2.6802876}
+    mPosition: {x: -1.5532064, y: 1.8198404}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -589,7 +589,7 @@ MonoBehaviour:
   mInternalPointMasses:
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.6759114, y: 3.6829488}
+    mPosition: {x: -0.4298979, y: 2.4444728}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -599,7 +599,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.8654022, y: 3.7229607}
+    mPosition: {x: -1.1709204, y: 2.4693992}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -609,7 +609,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.2792406, y: 3.9679296}
+    mPosition: {x: -0.80575657, y: 2.6220086}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -619,7 +619,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -2.1518803, y: 3.1505027}
+    mPosition: {x: -1.3493888, y: 2.1127725}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -629,7 +629,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.3257391, y: 2.2884321}
+    mPosition: {x: -0.8347241, y: 1.5757244}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -639,7 +639,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.44757318, y: 3.119284}
+    mPosition: {x: -0.28764904, y: 2.093324}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -649,7 +649,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -1.8273549, y: 2.6038148}
+    mPosition: {x: -1.1472179, y: 1.7721999}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -659,7 +659,7 @@ MonoBehaviour:
     body: {fileID: 114759824586233830}
   - mMass: 1
     mInverseMass: 1
-    mPosition: {x: -0.7056465, y: 2.5524678}
+    mPosition: {x: -0.4484222, y: 1.740212}
     force: {x: 0, y: 0}
     externalForce: {x: 0, y: 0}
     persistantForce: {x: 0, y: 0}
@@ -712,140 +712,140 @@ MonoBehaviour:
   - pointMassA: 0
     pointMassB: 1
     length: 0.41918048
-    scaledLength: 0.27785468
+    scaledLength: 0.41918048
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 1
     pointMassB: 2
     length: 0.5736417
-    scaledLength: 0.38023967
+    scaledLength: 0.5736417
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 2
     pointMassB: 3
     length: 0.7369247
-    scaledLength: 0.48847213
+    scaledLength: 0.7369247
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 3
     pointMassB: 4
     length: 0.7534976
-    scaledLength: 0.49945754
+    scaledLength: 0.7534976
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 4
     pointMassB: 5
     length: 0.58566153
-    scaledLength: 0.38820705
+    scaledLength: 0.58566153
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 5
     pointMassB: 6
     length: 0.53687865
-    scaledLength: 0.35587117
+    scaledLength: 0.53687865
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 6
     pointMassB: 7
     length: 0.41913044
-    scaledLength: 0.27782154
+    scaledLength: 0.41913044
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 7
     pointMassB: 8
     length: 0.7470633
-    scaledLength: 0.49519253
+    scaledLength: 0.7470633
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 8
     pointMassB: 9
     length: 0.786579
-    scaledLength: 0.52138567
+    scaledLength: 0.786579
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 9
     pointMassB: 10
     length: 0.60093623
-    scaledLength: 0.39833188
+    scaledLength: 0.60093623
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 10
     pointMassB: 11
     length: 0.5136346
-    scaledLength: 0.34046382
+    scaledLength: 0.5136346
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 11
     pointMassB: 12
     length: 0.51731616
-    scaledLength: 0.34290415
+    scaledLength: 0.51731616
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 12
     pointMassB: 13
     length: 0.50403863
-    scaledLength: 0.3341031
+    scaledLength: 0.50403863
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 13
     pointMassB: 14
     length: 0.5219168
-    scaledLength: 0.34595367
+    scaledLength: 0.5219168
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 14
     pointMassB: 15
     length: 0.585993
-    scaledLength: 0.38842672
+    scaledLength: 0.585993
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 15
     pointMassB: 16
     length: 0.63385344
-    scaledLength: 0.4201511
+    scaledLength: 0.63385344
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 16
     pointMassB: 17
     length: 0.6302243
-    scaledLength: 0.41774553
+    scaledLength: 0.6302243
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 17
     pointMassB: 18
     length: 0.61602896
-    scaledLength: 0.4083361
+    scaledLength: 0.61602896
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 18
     pointMassB: 19
     length: 0.8380347
-    scaledLength: 0.55549306
+    scaledLength: 0.8380347
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
   - pointMassA: 19
     pointMassB: 0
     length: 0.4863222
-    scaledLength: 0.3223597
+    scaledLength: 0.4863222
     lengthMultiplier: 1
     stiffness: 605.7
     damping: 102.9
@@ -853,294 +853,294 @@ MonoBehaviour:
   - pointMassA: 26
     pointMassB: 18
     length: 0.7747802
-    scaledLength: 0.51356477
+    scaledLength: 0.7747802
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 19
     pointMassB: 26
     length: 0.9899121
-    scaledLength: 0.65616536
+    scaledLength: 0.9899121
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 26
     pointMassB: 17
     length: 0.9317015
-    scaledLength: 0.61758035
+    scaledLength: 0.9317015
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 24
     pointMassB: 17
     length: 0.89127606
-    scaledLength: 0.59078425
+    scaledLength: 0.89127606
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 26
     pointMassB: 24
     length: 0.89390063
-    scaledLength: 0.592524
+    scaledLength: 0.89390063
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 24
     pointMassB: 16
     length: 0.67001027
-    scaledLength: 0.44411778
+    scaledLength: 0.67001027
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 24
     pointMassB: 15
     length: 0.78242296
-    scaledLength: 0.51863074
+    scaledLength: 0.78242296
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 24
     pointMassB: 14
     length: 1.0760391
-    scaledLength: 0.7132548
+    scaledLength: 1.0760391
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 27
     pointMassB: 14
     length: 0.79082084
-    scaledLength: 0.5241973
+    scaledLength: 0.79082084
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 24
     pointMassB: 27
     length: 1.0167664
-    scaledLength: 0.6739658
+    scaledLength: 1.0167664
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 27
     pointMassB: 13
     length: 0.6905234
-    scaledLength: 0.45771495
+    scaledLength: 0.6905234
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 27
     pointMassB: 12
     length: 0.7876577
-    scaledLength: 0.52210057
+    scaledLength: 0.7876577
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 25
     pointMassB: 12
     length: 1.0091988
-    scaledLength: 0.6689496
+    scaledLength: 1.0091988
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 27
     pointMassB: 25
     length: 0.939579
-    scaledLength: 0.622802
+    scaledLength: 0.939579
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 25
     pointMassB: 11
     length: 0.7547969
-    scaledLength: 0.50031877
+    scaledLength: 0.7547969
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 25
     pointMassB: 10
     length: 0.6813527
-    scaledLength: 0.4516361
+    scaledLength: 0.6813527
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 25
     pointMassB: 9
     length: 0.8564981
-    scaledLength: 0.5677316
+    scaledLength: 0.8564981
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 25
     pointMassB: 20
     length: 0.91748697
-    scaledLength: 0.60815823
+    scaledLength: 0.91748697
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 9
     length: 0.9334875
-    scaledLength: 0.6187642
+    scaledLength: 0.9334875
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 8
     length: 0.69311464
-    scaledLength: 0.45943254
+    scaledLength: 0.69311464
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 7
     length: 0.90701723
-    scaledLength: 0.60121834
+    scaledLength: 0.90701723
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 22
     length: 1.006632
-    scaledLength: 0.6672482
+    scaledLength: 1.006632
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 22
     pointMassB: 7
     length: 0.9374759
-    scaledLength: 0.6214079
+    scaledLength: 0.9374759
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 22
     pointMassB: 6
     length: 0.7410065
-    scaledLength: 0.49117777
+    scaledLength: 0.7410065
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 22
     pointMassB: 5
     length: 0.63325924
-    scaledLength: 0.41975725
+    scaledLength: 0.63325924
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 22
     pointMassB: 4
     length: 0.889425
-    scaledLength: 0.5895573
+    scaledLength: 0.889425
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 22
     pointMassB: 21
     length: 0.95842105
-    scaledLength: 0.63529146
+    scaledLength: 0.95842105
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 21
     pointMassB: 4
     length: 0.9339588
-    scaledLength: 0.6190766
+    scaledLength: 0.9339588
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 21
     length: 1.795519
-    scaledLength: 1.1901637
+    scaledLength: 1.795519
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 21
     length: 0.9657343
-    scaledLength: 0.64013904
+    scaledLength: 0.9657343
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 23
     length: 2.3671508
-    scaledLength: 1.569071
+    scaledLength: 2.3671508
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 2
     length: 0.86001617
-    scaledLength: 0.57006365
+    scaledLength: 0.86001617
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 2
     pointMassB: 21
     length: 0.8727605
-    scaledLength: 0.5785112
+    scaledLength: 0.8727605
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 3
     pointMassB: 21
     length: 0.63710374
-    scaledLength: 0.42230558
+    scaledLength: 0.63710374
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 1
     length: 0.6093285
-    scaledLength: 0.4038947
+    scaledLength: 0.60932845
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 0
     length: 0.6206601
-    scaledLength: 0.4114059
+    scaledLength: 0.6206601
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 0
     pointMassB: 1
     length: 0.41918048
-    scaledLength: 0.27785468
+    scaledLength: 0.41918048
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 19
     length: 0.8641989
-    scaledLength: 0.57283616
+    scaledLength: 0.8641989
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 23
     pointMassB: 26
     length: 0.95912004
-    scaledLength: 0.6357548
+    scaledLength: 0.95912004
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 26
     length: 2.3807497
-    scaledLength: 1.5780851
+    scaledLength: 2.3807497
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 20
     pointMassB: 27
     length: 1.7060696
-    scaledLength: 1.1308719
+    scaledLength: 1.7060696
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
   - pointMassA: 27
     pointMassB: 26
     length: 1.6940174
-    scaledLength: 1.1228831
+    scaledLength: 1.6940174
     lengthMultiplier: 1
     stiffness: 600
     damping: 5
@@ -4660,7 +4660,7 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 4575892464255662, guid: 9711e3c2399ed0b4b89967e8ccda7a84, type: 2}
+    plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
     plane3: {fileID: 0}
@@ -9248,7 +9248,7 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 4575892464255662, guid: 9711e3c2399ed0b4b89967e8ccda7a84, type: 2}
+    plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
     plane3: {fileID: 0}
