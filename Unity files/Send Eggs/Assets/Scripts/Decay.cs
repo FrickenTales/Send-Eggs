@@ -4,30 +4,14 @@ using UnityEngine;
 
 public class Decay : MonoBehaviour {
 
-    public float lifetime = 4;
-    public bool shrink = false;
-    private float scale = 1;
+    public float lifetimeMin = 4;
+    public float lifetimeMax = 6;
 
 	// Use this for initialization
 	void Start ()
     {
-        Invoke("Shrink", lifetime / 2);
-        Invoke("Kill", lifetime);
+        Invoke("Kill", Random.Range(lifetimeMin, lifetimeMax));
 	}
-
-    private void Update()
-    {
-        transform.localScale = new Vector3(scale, scale, scale);
-        if (shrink)
-        {
-            scale -= 0.007f;
-        }
-    }
-
-    void Shrink()
-    {
-        shrink = true;
-    }
 
     void Kill ()
     {

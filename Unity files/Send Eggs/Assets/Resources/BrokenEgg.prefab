@@ -319,23 +319,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631847078170750}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae72ea1b5e80b2b4db34ba1f852c95dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 4
-  shrink: 0
+  lifetimeMin: 4
+  lifetimeMax: 6
 --- !u!114 &114468389258627912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1478688211918500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae72ea1b5e80b2b4db34ba1f852c95dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 4
-  shrink: 0
+  lifetimeMin: 4
+  lifetimeMax: 6
