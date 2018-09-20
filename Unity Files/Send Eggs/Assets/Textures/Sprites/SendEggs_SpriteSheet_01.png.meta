@@ -14,6 +14,10 @@ TextureImporter:
     21300018: Pan
     21300020: Stove
     21300022: Yolk
+    21300024: WhitesDrop_01
+    21300026: WhitesDrop_02
+    21300028: WhitePuddle_01
+    21300030: WhitesPuddle_02
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -377,13 +381,93 @@ TextureImporter:
         width: 480
         height: 479
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7b1f2fef05526624ead3b3f80df548d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhitesDrop_01
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1299
+        width: 175
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a65ee2eb1eac340bc734385fd54b3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhitesDrop_02
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 1282
+        width: 171
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c753d78c434d884c9db11dae3ca6cae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhitePuddle_01
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1120
+        width: 440
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b22d99dd3503d4ba9dff86ea134816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhitesPuddle_02
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 992
+        width: 471
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84cbad5da714ab48a486dc95d4b014b
       vertices: []
       indices: 
       edges: []
