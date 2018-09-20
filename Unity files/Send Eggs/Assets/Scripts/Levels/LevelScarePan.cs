@@ -8,11 +8,17 @@ public class LevelScarePan : MonoBehaviour {
     private GameObject shell;
     private Animator cartonanim;
     private PlayerController player;
-    private WinObjective pan;
-    private ButtonScript panButton;
+    private WinObjectiveScared pan;
+    private ButtonScriptScared panButton;
     private Transform playerSpawn;
     private LeverScript lever;
     private GM gm;
+
+    private void Awake()
+    {
+        GameObject.Find("Frypan_Master").SetActive(false);
+        GameObject.Find("Button_Master").SetActive(false);
+    }
 
     // Use this for initialization
     void Start ()
@@ -28,11 +34,13 @@ public class LevelScarePan : MonoBehaviour {
         player.canDoubleJump = false;
 
         //pan
-        pan = GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>();
+        pan = GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjectiveScared>();
+        pan.curPlace = 0;
+        pan.transform.position = pan.places[0];
         pan.ready = false;
 
         //pan button
-        panButton = GameObject.FindGameObjectWithTag("PanButton").GetComponent<ButtonScript>();
+        panButton = GameObject.FindGameObjectWithTag("PanButton").GetComponent<ButtonScriptScared>();
         panButton.isOn = false;
 
         //bridge lever
