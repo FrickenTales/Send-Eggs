@@ -13,6 +13,7 @@ TagManager:
   - Corpse
   - SpawnPoint
   - Carton
+  - Trail
   layers:
   - Default
   - TransparentFX
