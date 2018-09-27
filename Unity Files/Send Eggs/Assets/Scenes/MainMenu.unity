@@ -782,7 +782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   play: {fileID: 443822845}
   settings: {fileID: 0}
-  quit: {fileID: 0}
+  quit: {fileID: 112668989}
 --- !u!1001 &1214169442
 Prefab:
   m_ObjectHideFlags: 0

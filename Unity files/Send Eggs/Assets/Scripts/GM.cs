@@ -21,6 +21,9 @@ public class GM : MonoBehaviour {
     public GameObject[] mainAssets = new GameObject[7];
     public GameObject[] levels;
 
+    private GameObject pauseUI;
+    private bool paused = false;
+
     public bool holdPlayer = false;
 
 	// Use this for initialization
@@ -34,6 +37,7 @@ public class GM : MonoBehaviour {
         mainAssets[5] = GameObject.Find("Frypan_Master");
         mainAssets[6] = GameObject.Find("Bridge_Master");
 
+        pauseUI = GameObject.Find("PauseUI");
         winScreen = GameObject.Find("LevelCompleteCanvas").GetComponent<WinScreen>();
         wholeLevel = GameObject.Find("Level_Layout");
 
@@ -55,12 +59,31 @@ public class GM : MonoBehaviour {
             currentLevel = 999;
             testText.enabled = true;
         }
+
+        pauseUI.SetActive(false);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         deathCountText.text = (deathCount + " Deaths");
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            paused = !paused;
+        }
+
+        if (paused)
+        {
+            pauseUI.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            pauseUI.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
 
     public void NewLevel()
