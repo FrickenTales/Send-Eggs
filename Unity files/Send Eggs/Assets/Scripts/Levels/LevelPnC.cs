@@ -23,22 +23,30 @@ public class LevelPnC : MonoBehaviour {
     private Vector3 mouseStartPos;
     private Vector3 playerStartPos;
 
+    private bool ready = false;
+
     private void Awake()
     {
         Cursor.visible = false;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         playerObject = transform.GetChild(0).gameObject;
+        player = transform.GetChild(0).GetComponent<PlayerController>();
+    }
+
+    private void Start()
+    {
+        playerObject = transform.GetChild(0).gameObject;
+        Invoke("Begin", 0.1f);
     }
 
     // Use this for initialization
-    void Start ()
+    void Begin ()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
-        player = transform.GetChild(0).GetComponent<PlayerController>();
         player.maxSpeed = 0;
         player.jumpForce = 0;
         player.canDoubleJump = false;
@@ -61,13 +69,15 @@ public class LevelPnC : MonoBehaviour {
 
         SpawnPlayer();
         mouseStartPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+
+        ready = true;
     }
 
     void KillPlayer()
     {
         Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
-        Start();
+        Begin();
         //SpawnPlayer();
     }
 
@@ -84,15 +94,22 @@ public class LevelPnC : MonoBehaviour {
     {
         //playerStartPos = player.transform.position;
 
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        move = mousePos - mouseStartPos;
-        playerObject.transform.position = playerSpawn.position + move;
+        if (ready)
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+            move = mousePos - mouseStartPos;
+            playerObject.transform.position = playerSpawn.position + move;
+        }
         /*
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
         playerObject.transform.position = pz;
         */
 
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            KillPlayer();
+        }
 
         if (player.isDead)
         {
