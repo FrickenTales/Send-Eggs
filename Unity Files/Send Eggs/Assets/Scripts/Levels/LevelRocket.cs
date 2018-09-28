@@ -3,53 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelPnC : MonoBehaviour {
+public class LevelRocket : MonoBehaviour {
 
     private GameObject shell;
     private Animator cartonanim;
-    private PlayerController player;
+    private PlayerControllerRocket player;
     private WinObjective pan;
     private ButtonScript panButton;
     private Transform playerSpawn;
     private LeverScript lever;
     private GM gm;
 
-    private GameObject playerObject;
-    private Transform clicked;
-    private Vector3 mousePos;
-    private Vector3 move;
-    private Camera cam;
-
-    private Vector3 mouseStartPos;
-    private Vector3 playerStartPos;
-
-    private bool ready = false;
-
-    private void Awake()
-    {
-        Cursor.visible = false;
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        playerObject = transform.GetChild(0).gameObject;
-        player = transform.GetChild(0).GetComponent<PlayerController>();
-    }
-
-    private void Start()
-    {
-        playerObject = transform.GetChild(0).gameObject;
-        Invoke("Begin", 0.1f);
-    }
-
     // Use this for initialization
-    void Begin ()
+    void Start ()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
-        player.maxSpeed = 0;
-        player.jumpForce = 0;
-        player.canDoubleJump = false;
+        player = transform.GetChild(0).GetComponent<PlayerControllerRocket>();
+        player.ready = false;
 
         //pan
         pan = GameObject.FindGameObjectWithTag("Objective").GetComponent<WinObjective>();
@@ -68,22 +42,20 @@ public class LevelPnC : MonoBehaviour {
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
         SpawnPlayer();
-        mouseStartPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-
-        ready = true;
-    }
+	}
 
     void KillPlayer()
     {
         Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
-        Begin();
+        Start();
         //SpawnPlayer();
     }
 
     void SpawnPlayer()
     {
         player.transform.position = playerSpawn.position;
+        player.transform.eulerAngles = Vector3.zero;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         cartonanim.SetTrigger("SpawnEgg");
         player.anim.SetTrigger("Spawn");
@@ -92,25 +64,6 @@ public class LevelPnC : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        //playerStartPos = player.transform.position;
-
-        if (ready)
-        {
-            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-            move = mousePos - mouseStartPos;
-            playerObject.transform.position = playerSpawn.position + move;
-        }
-        /*
-        Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pz.z = 0;
-        playerObject.transform.position = pz;
-        */
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            KillPlayer();
-        }
-
         if (player.isDead)
         {
             player.isDead = false;

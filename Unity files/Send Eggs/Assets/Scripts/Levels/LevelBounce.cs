@@ -15,14 +15,21 @@ public class LevelBounce : MonoBehaviour {
     private GM gm;
 
     // Use this for initialization
-    void Start ()
+
+    private void Start()
+    {
+        player = transform.GetChild(0).GetComponent<PlayerController>();
+        Invoke("Begin", 0.1f);
+    }
+
+    void Begin ()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
-        player = transform.GetChild(0).GetComponent<PlayerController>();
+
         player.maxSpeed = 9;
         player.jumpForce = 20;
         player.canDoubleJump = false;
@@ -50,7 +57,7 @@ public class LevelBounce : MonoBehaviour {
     {
         Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
-        Start();
+        Begin();
         //SpawnPlayer();
     }
 
