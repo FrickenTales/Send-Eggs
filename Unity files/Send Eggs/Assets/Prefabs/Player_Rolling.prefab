@@ -535,6 +535,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}
@@ -542,7 +543,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   animSpeed: 0
   grounded: 0
+  yolkSpawn: 0
   groundCheck: {fileID: 0}
   whatisGround:
     serializedVersion: 2
     m_Bits: 4294964735
+  yolk: {fileID: 1906691051046942, guid: 68965eba943c02a48a382c6bb37c8f1e, type: 2}
+  eggWhites: {fileID: 198365634122819996, guid: af485eec2e13c00409892dded3150684,
+    type: 2}
