@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour {
 
@@ -87,6 +88,11 @@ public class GM : MonoBehaviour {
         {
             pauseUI.SetActive(false);
             Time.timeScale = 1;
+        }
+
+        if(currentLevel == levels.Length)
+        {
+            SceneManager.LoadScene("EndScreen");
         }
     }
 

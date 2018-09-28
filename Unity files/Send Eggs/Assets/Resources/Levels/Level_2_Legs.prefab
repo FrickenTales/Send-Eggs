@@ -603,6 +603,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}
@@ -625,6 +626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Bend Legs
+  LevelName: Runny Egg
   levelTileColour: {r: 0.40784314, g: 0.65882355, b: 0.46094733, a: 1}
   levelBackgroundColour: {r: 0.7490196, g: 0.8509804, b: 0.77111113, a: 1}

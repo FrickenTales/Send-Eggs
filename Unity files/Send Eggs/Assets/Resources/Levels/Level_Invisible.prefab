@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Strong Memory
+  LevelName: Muscle Memory
   levelTileColour: {r: 0.4092, g: 0.66, b: 0.65164006, a: 0}
   levelBackgroundColour: {r: 0.748, g: 0.85, b: 0.84830004, a: 1}
 --- !u!114 &114502930981773166
@@ -580,6 +580,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}

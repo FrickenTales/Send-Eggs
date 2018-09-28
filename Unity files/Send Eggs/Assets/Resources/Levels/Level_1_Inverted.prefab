@@ -566,6 +566,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}
@@ -588,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: sggE dneS
+  LevelName: sggE deirF
   levelTileColour: {r: 0.40784314, g: 0.47815427, b: 0.65882355, a: 1}
   levelBackgroundColour: {r: 0.7490196, g: 0.7779085, b: 0.8509804, a: 1}
 --- !u!114 &114231342527519080
