@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour {
     public float animSpeed;
 
     public bool grounded;
-    //public bool yolkSpawn = false;
     public Transform groundCheck;
     private Vector2 groundCap = new Vector2 (0.8f,0.35f);
     //private float groundRadius = 0.15f;
@@ -33,14 +32,10 @@ public class PlayerController : MonoBehaviour {
 
     private GM gm;
 
-    /*public GameObject yolk;
-    public ParticleSystem eggWhites;*/
-
     // Use this for initialization
     void Awake ()
     {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
-        yolk = GameObject.Find("EggYolk");
 
         rb2d = GetComponent<Rigidbody2D>();
         body = transform.GetChild(0).GetChild(0).gameObject;
@@ -132,15 +127,6 @@ public class PlayerController : MonoBehaviour {
                 doubleJump = true;
         }
 
- /*       if (isDead == true)
-        {
-            if (yolkSpawn == false)
-            {
-                Instantiate(yolk, transform.position, transform.rotation);
-                Instantiate(eggWhites, transform.position, transform.rotation);
-                yolkSpawn = true;
-            }
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
