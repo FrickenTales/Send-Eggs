@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour {
             if (!doubleJump && !grounded)
                 doubleJump = true;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
