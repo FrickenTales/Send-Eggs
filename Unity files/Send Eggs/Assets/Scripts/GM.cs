@@ -26,9 +26,13 @@ public class GM : MonoBehaviour {
 
     public bool holdPlayer = false;
 
+    private GameObject cam;
+
 	// Use this for initialization
 	void Start ()
     {
+        cam = GameObject.Find("Main Camera");
+
         mainAssets[0] = GameObject.Find("Button_Master");
         mainAssets[1] = GameObject.Find("Spikes_Master");
         mainAssets[2] = GameObject.Find("Lever_Master");
@@ -88,6 +92,7 @@ public class GM : MonoBehaviour {
 
     public void NewLevel()
     {
+        cam.transform.eulerAngles = new Vector3(0, 0, 0);
         ResetAssets();
         wholeLevel.transform.position = new Vector3(0, 0, 0);
         currentLevel++;

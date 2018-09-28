@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4733222464359086}
+  - component: {fileID: 114960412513066292}
   m_Layer: 11
   m_Name: BrokenEgg
   m_TagString: Corpse
@@ -339,3 +340,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetimeMin: 4
   lifetimeMax: 6
+--- !u!114 &114960412513066292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342772425445684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae72ea1b5e80b2b4db34ba1f852c95dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeMin: 6
+  lifetimeMax: 7

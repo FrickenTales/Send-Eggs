@@ -28,16 +28,27 @@ public class WinObjective : MonoBehaviour {
         {
             if (ready)
             {
+                WinLevel();
+                /*
                 if (Time.time > safetyWait)
                 {
-                    safetyWait = Time.time + safety;
-                    ready = false;
-                    gm.holdPlayer = true;
-                    print("win");
-                    gm.WinCanvas();
-                    Invoke("TellGM", 0.7f);
+                    WinLevel();
                 }
+                */
             }
+        }
+    }
+
+    public void WinLevel()
+    {
+        if (Time.time > safetyWait)
+        {
+            safetyWait = Time.time + safety;
+            ready = false;
+            gm.holdPlayer = true;
+            print("win");
+            gm.WinCanvas();
+            Invoke("TellGM", 0.7f);
         }
     }
 
