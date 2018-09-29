@@ -33,6 +33,7 @@ public class PlayerControllerGolf : MonoBehaviour {
     private GM gm;
 
     public GameObject club;
+    public GameObject arrowHolder;
     private Vector3 mousePos;
     private Vector3 mouseStartPos;
     private Vector3 playerStartPos;
@@ -43,7 +44,7 @@ public class PlayerControllerGolf : MonoBehaviour {
     // Use this for initialization
     void Awake ()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
         gm = GameObject.Find("GameManager").GetComponent<GM>();
@@ -56,6 +57,7 @@ public class PlayerControllerGolf : MonoBehaviour {
         Flip();
 
         club = GameObject.Find("Club");
+        arrowHolder = GameObject.Find("ArrowHolder");
         mouseStartPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
     }
 	
@@ -150,14 +152,17 @@ public class PlayerControllerGolf : MonoBehaviour {
             if (grounded)
             {
                 club.SetActive(true);
+                arrowHolder.SetActive(true);
 
                 club.transform.up = body.transform.position - club.transform.position;
+                arrowHolder.transform.right = body.transform.position - club.transform.position;
 
                 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
                 mouseMove = mousePos - mouseStartPos;
                 club.transform.position = body.transform.position + mouseMove;
 
                 hitForce = Vector2.Distance(club.transform.position, body.transform.position) * 3;
+                arrowHolder.transform.localScale = new Vector3(hitForce / 3.5f, 1, 1);
             }
         }
         else
@@ -168,6 +173,8 @@ public class PlayerControllerGolf : MonoBehaviour {
             mouseStartPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             mouseMove = Vector3.zero;
             club.SetActive(false);
+            arrowHolder.transform.localScale = Vector3.one;
+            arrowHolder.SetActive(false);
         }
     }
 

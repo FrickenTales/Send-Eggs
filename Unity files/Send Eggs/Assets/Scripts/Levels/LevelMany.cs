@@ -16,8 +16,13 @@ public class LevelMany : MonoBehaviour {
 
     public GameObject playerObject;
 
+    private void Start()
+    {
+        Invoke("Begin", 0.1f);
+    }
+
     // Use this for initialization
-    void Start ()
+    void Begin ()
     {
         shell = Resources.Load("BrokenEgg") as GameObject;
         cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();

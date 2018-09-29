@@ -52,8 +52,17 @@ public class PlayerController : MonoBehaviour {
         //grounded = Physics2D.OverlapCapsule(groundCheck.position, groundCap, CapsuleDirection2D.Horizontal, 90, whatisGround);
         grounded = Physics2D.OverlapBox(groundCheck.position, groundCap, 0, whatisGround);
 
-        if (rb2d.velocity.y < maxFallSpeed)
-            willDie = true;
+        if(maxFallSpeed < 0)
+        {
+            if (rb2d.velocity.y < maxFallSpeed)
+                willDie = true;
+        }
+        else
+        {
+            if (rb2d.velocity.y > maxFallSpeed)
+                willDie = true;
+        }
+
 
         if (grounded && willDie)
         {

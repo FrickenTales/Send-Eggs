@@ -98,6 +98,7 @@ public class GM : MonoBehaviour {
 
     public void NewLevel()
     {
+        Cursor.visible = true;
         cam.transform.eulerAngles = new Vector3(0, 0, 0);
         ResetAssets();
         wholeLevel.transform.position = new Vector3(0, 0, 0);
@@ -135,6 +136,13 @@ public class GM : MonoBehaviour {
         for (var i = 0; i < gameObjects.Length; i++)
         {
             Destroy(gameObjects[i]);
+        }
+
+        var gameObjects2 = GameObject.FindGameObjectsWithTag("Player");
+
+        for (var i = 0; i < gameObjects2.Length; i++)
+        {
+            Destroy(gameObjects2[i]);
         }
     }
 }

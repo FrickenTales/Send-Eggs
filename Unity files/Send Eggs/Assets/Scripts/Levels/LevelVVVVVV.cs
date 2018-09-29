@@ -26,6 +26,7 @@ public class LevelVVVVVV : MonoBehaviour
         player = transform.GetChild(0).GetComponent<PlayerController>();
         player.maxSpeed = 9;
         player.jumpForce = 5;
+        player.maxFallSpeed = -16f;
         player.canDoubleJump = false;
         player.rb2d.gravityScale = 2;
 
@@ -71,6 +72,8 @@ public class LevelVVVVVV : MonoBehaviour
         {
             player.rb2d.gravityScale = -player.rb2d.gravityScale;
             player.jumpForce = -player.jumpForce;
+
+            player.maxFallSpeed = -player.maxFallSpeed;
         }
 
         if (player.rb2d.gravityScale < 0)

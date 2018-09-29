@@ -28,6 +28,7 @@ public class LevelPnC : MonoBehaviour {
     private void Awake()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         playerObject = transform.GetChild(0).gameObject;
         player = transform.GetChild(0).GetComponent<PlayerController>();
