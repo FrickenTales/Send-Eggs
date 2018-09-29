@@ -566,6 +566,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}
@@ -599,6 +600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Send Eggs
+  LevelName: Fried Eggs
   levelTileColour: {r: 0.40784314, g: 0.62117654, b: 0.65882355, a: 1}
   levelBackgroundColour: {r: 0.7490196, g: 0.8356863, b: 0.8509804, a: 1}

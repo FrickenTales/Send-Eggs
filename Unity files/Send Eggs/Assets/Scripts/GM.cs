@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour {
 
@@ -26,9 +27,13 @@ public class GM : MonoBehaviour {
 
     public bool holdPlayer = false;
 
+    private GameObject cam;
+
 	// Use this for initialization
 	void Start ()
     {
+        cam = GameObject.Find("Main Camera");
+
         mainAssets[0] = GameObject.Find("Button_Master");
         mainAssets[1] = GameObject.Find("Spikes_Master");
         mainAssets[2] = GameObject.Find("Lever_Master");
@@ -84,10 +89,17 @@ public class GM : MonoBehaviour {
             pauseUI.SetActive(false);
             Time.timeScale = 1;
         }
+
+        if(currentLevel == levels.Length)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
     }
 
     public void NewLevel()
     {
+        Cursor.visible = true;
+        cam.transform.eulerAngles = new Vector3(0, 0, 0);
         ResetAssets();
         wholeLevel.transform.position = new Vector3(0, 0, 0);
         currentLevel++;
@@ -124,6 +136,13 @@ public class GM : MonoBehaviour {
         for (var i = 0; i < gameObjects.Length; i++)
         {
             Destroy(gameObjects[i]);
+        }
+
+        var gameObjects2 = GameObject.FindGameObjectsWithTag("Player");
+
+        for (var i = 0; i < gameObjects2.Length; i++)
+        {
+            Destroy(gameObjects2[i]);
         }
     }
 }
