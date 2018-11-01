@@ -9,9 +9,12 @@ public class ButtonClickScript : MonoBehaviour {
     private GameObject button;
     public bool isOn = false;
 
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         button = transform.GetChild(0).gameObject;
     }
 
@@ -34,6 +37,10 @@ public class ButtonClickScript : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        if (!isOn)
+        {
+            audioSource.Play();
+        }
         isOn = true;
     }
 }

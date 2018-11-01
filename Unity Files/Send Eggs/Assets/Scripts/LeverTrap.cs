@@ -9,9 +9,12 @@ public class LeverTrap : MonoBehaviour {
     private Animator anim;
     public bool isOn = false;
 
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.Find("Player_Rolling");
         cntrl = player.GetComponent<PlayerController>();
         anim = GetComponent<Animator>();
@@ -35,6 +38,10 @@ public class LeverTrap : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
+            if (!isOn)
+            {
+                audioSource.Play();
+            }
             isOn = true;
             Invoke("kill", 0.4f);
         }

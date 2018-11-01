@@ -26,7 +26,7 @@ public class PlayerControllerCarton : MonoBehaviour {
     public Transform groundCheck;
     private Vector2 groundCap = new Vector2(2.5f, 0.35f);
     public LayerMask whatisGround;
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
     private bool doubleJump = false;
 
@@ -38,7 +38,7 @@ public class PlayerControllerCarton : MonoBehaviour {
         gm = GameObject.Find("GameManager").GetComponent<GM>();
         husk = Resources.Load("Player_Husk") as GameObject;
         huskSpawn = transform.GetChild(2).gameObject.transform;
-        audioSource = transform.GetChild(0).GetComponent<AudioSource>();
+        //audioSource = transform.GetChild(0).GetComponent<AudioSource>();
 
         rb2d = GetComponent<Rigidbody2D>();
         body = transform.GetChild(0).GetChild(0).gameObject;
@@ -88,7 +88,7 @@ public class PlayerControllerCarton : MonoBehaviour {
         if ((grounded || !doubleJump) && Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("Open");
-            audioSource.Play();
+            //audioSource.Play();
             GameObject shell = Instantiate(husk, huskSpawn.position, husk.transform.rotation);
             Rigidbody2D shellrb2d = shell.GetComponent<Rigidbody2D>();
             shellrb2d.velocity = new Vector2(Random.Range(-2, 2), 8);

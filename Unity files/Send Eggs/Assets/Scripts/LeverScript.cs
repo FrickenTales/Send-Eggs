@@ -9,9 +9,12 @@ public class LeverScript : MonoBehaviour {
     private Animator bridgeAnim;
     public bool isOn = false;
 
-	// Use this for initialization
-	void Start ()
+    private AudioSource audioSource;
+
+    // Use this for initialization
+    void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         bridgeAnim = GameObject.FindGameObjectWithTag("Bridge").GetComponent<Animator>();
         anim = GetComponent<Animator>();
 	}
@@ -39,10 +42,13 @@ public class LeverScript : MonoBehaviour {
             if (toggles)
             {
                 isOn = !isOn;
+                audioSource.Play();
             }
             else
             {
-                isOn = true;
+                if (!isOn)
+                    audioSource.Play();
+                isOn = true;               
             }
         }
     }

@@ -1,36 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class LevelCarton : MonoBehaviour {
+public class LevelControls : MonoBehaviour {
 
-    private PlayerControllerCarton player;
+    private GameObject shell;
+    private Animator cartonanim;
+    private PlayerControllerControls player;
     private WinObjective pan;
     private ButtonScript panButton;
     private Transform playerSpawn;
     private LeverScript lever;
     private GM gm;
-    private GameObject oldCarton;
 
-    private bool first = true;
-
-    private AudioSource audioSource;
+    private bool leverUsed;
+    private bool buttonUsed;
 
     // Use this for initialization
-
-    void Awake()
+    void Start ()
     {
-        oldCarton = GameObject.Find("EggCarton_Master");
-        oldCarton.SetActive(false);
-    }
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
+        shell = Resources.Load("BrokenEgg") as GameObject;
+        cartonanim = GameObject.FindGameObjectWithTag("Carton").GetComponent<Animator>();
         gm = GameObject.Find("GameManager").GetComponent<GM>();
 
         //player base stats
-        player = transform.GetChild(0).GetComponent<PlayerControllerCarton>();
+        player = transform.GetChild(0).GetComponent<PlayerControllerControls>();
         player.maxSpeed = 9;
         player.jumpForce = 11;
         player.canDoubleJump = false;
@@ -52,18 +47,11 @@ public class LevelCarton : MonoBehaviour {
         playerSpawn = GameObject.Find("SpawnPoint").transform;
 
         SpawnPlayer();
-
-        if (first)
-        {
-            player.anim.SetTrigger("Open");
-            Instantiate(player.husk, player.huskSpawn.position, player.husk.transform.rotation);
-            first = false;
-        }
-    }
+	}
 
     void KillPlayer()
     {
-        audioSource.Play();
+        Instantiate(shell, player.body.transform.position, player.body.transform.rotation);
         gm.deathCount++;
         Start();
         //SpawnPlayer();
@@ -73,15 +61,35 @@ public class LevelCarton : MonoBehaviour {
     {
         player.transform.position = playerSpawn.position;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        cartonanim.SetTrigger("SpawnEgg");
+        player.anim.SetTrigger("Spawn");
     }
-
-    // Update is called once per frame
-    void Update()
+	
+	// Update is called once per frame
+	void Update ()
     {
+        if (lever.isOn)
+        {
+            if (!leverUsed)
+            {
+                player.controls = !player.controls;
+                leverUsed = true;
+            }
+        }
+
+        if (panButton.isOn)
+        {
+            if (!buttonUsed)
+            {
+                player.controls = !player.controls;
+                buttonUsed = true;
+            }
+        }
+
         if (player.isDead)
         {
             player.isDead = false;
             KillPlayer();
         }
-    }
+	}
 }

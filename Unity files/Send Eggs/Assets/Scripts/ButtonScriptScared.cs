@@ -9,9 +9,12 @@ public class ButtonScriptScared : MonoBehaviour {
     private GameObject button;
     public bool isOn = false;
 
-	// Use this for initialization
-	void Start ()
+    private AudioSource audioSource;
+
+    // Use this for initialization
+    void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         button = transform.GetChild(0).gameObject;
 	}
 	
@@ -39,6 +42,7 @@ public class ButtonScriptScared : MonoBehaviour {
             if (!isOn)
             {
                 isOn = true;
+                audioSource.Play();
             }
         }
     }
