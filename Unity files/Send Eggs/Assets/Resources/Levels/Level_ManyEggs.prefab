@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4370648487377914}
   - component: {fileID: 114541394648489582}
   - component: {fileID: 114321219355356470}
+  - component: {fileID: 114125388956819996}
   m_Layer: 0
   m_Name: Level_ManyEggs
   m_TagString: Untagged
@@ -41,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114125388956819996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1075247308720822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level10
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114321219355356470
 MonoBehaviour:
   m_ObjectHideFlags: 1

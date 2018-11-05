@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 4971086974337588}
   - component: {fileID: 114551298119195988}
   - component: {fileID: 114214286279570378}
+  - component: {fileID: 114279967612702680}
   m_Layer: 0
   m_Name: Level_Trap
   m_TagString: Untagged
@@ -1013,6 +1014,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridge: {fileID: 0}
+--- !u!114 &114279967612702680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1631121227200008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level9
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114322662153352282
 MonoBehaviour:
   m_ObjectHideFlags: 1

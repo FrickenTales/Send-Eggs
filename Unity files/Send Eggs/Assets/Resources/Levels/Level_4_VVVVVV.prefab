@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 4052815432530092}
   - component: {fileID: 114394819354143578}
   - component: {fileID: 114424349952002476}
+  - component: {fileID: 114436073373377748}
   m_Layer: 0
   m_Name: Level_4_VVVVVV
   m_TagString: Untagged
@@ -566,6 +567,7 @@ MonoBehaviour:
   jumpForce: 11
   canDoubleJump: 0
   maxFallSpeed: -16
+  move: 0
   isDead: 0
   rb2d: {fileID: 0}
   body: {fileID: 0}
@@ -602,3 +604,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e004d055d51d94e94639b19152b2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114436073373377748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967774596395994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level4
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2

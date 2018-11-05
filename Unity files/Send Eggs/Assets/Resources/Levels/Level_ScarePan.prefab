@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4120382462753830}
   - component: {fileID: 114739931594403524}
   - component: {fileID: 114434728660549470}
+  - component: {fileID: 114563222619525732}
   m_Layer: 0
   m_Name: Level_ScarePan
   m_TagString: Untagged
@@ -964,6 +965,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d23cebb087cc74e867ad5cbc9137b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114563222619525732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643865201086732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level12
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114739931594403524
 MonoBehaviour:
   m_ObjectHideFlags: 1

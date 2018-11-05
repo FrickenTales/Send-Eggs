@@ -812,6 +812,7 @@ GameObject:
   - component: {fileID: 836983734}
   - component: {fileID: 836983733}
   - component: {fileID: 836983732}
+  - component: {fileID: 836983737}
   m_Layer: 5
   m_Name: PauseUI
   m_TagString: Untagged
@@ -909,6 +910,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &836983737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836983731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: GameQuit
+  m_TrackableProperty:
+    m_Fields:
+    - m_ParamName: TimePlayed
+      m_Target: {fileID: 1930256532}
+      m_FieldPath: 
+      m_TypeString: 
+      m_DoStatic: 0
+      m_StaticString: 
+    - m_ParamName: Deaths
+      m_Target: {fileID: 1930256532}
+      m_FieldPath: 
+      m_TypeString: 
+      m_DoStatic: 0
+      m_StaticString: 
+  m_Trigger: 0
 --- !u!1 &978492047
 GameObject:
   m_ObjectHideFlags: 0

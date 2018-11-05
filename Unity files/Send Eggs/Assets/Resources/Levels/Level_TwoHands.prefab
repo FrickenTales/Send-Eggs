@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 4271344287449984}
   - component: {fileID: 114010438277161350}
   - component: {fileID: 114661854843134884}
+  - component: {fileID: 114525799404125830}
   m_Layer: 0
   m_Name: Level_TwoHands
   m_TagString: Untagged
@@ -564,6 +565,21 @@ MonoBehaviour:
   LevelName: ambideggstrous
   levelTileColour: {r: 0.49611166, g: 0.65882355, b: 0.40784314, a: 1}
   levelBackgroundColour: {r: 0.7847059, g: 0.8509804, b: 0.7490196, a: 1}
+--- !u!114 &114525799404125830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720903157453546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level8
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114661854843134884
 MonoBehaviour:
   m_ObjectHideFlags: 1

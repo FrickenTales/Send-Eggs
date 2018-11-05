@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4662207411017870}
   - component: {fileID: 114562114838988054}
   - component: {fileID: 114411212172558050}
+  - component: {fileID: 114180897869446942}
   m_Layer: 0
   m_Name: Level_Bouncy
   m_TagString: Untagged
@@ -550,6 +551,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114180897869446942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016480757209166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level6
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114240668445411926
 MonoBehaviour:
   m_ObjectHideFlags: 1

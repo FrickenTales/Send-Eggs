@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 114246629793672116}
   - component: {fileID: 114740897088653146}
   - component: {fileID: 82505749801060358}
+  - component: {fileID: 114033468205280976}
   m_Layer: 0
   m_Name: Level_3_Carton
   m_TagString: Untagged
@@ -1020,6 +1021,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114033468205280976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1597454500388874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level3
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114246629793672116
 MonoBehaviour:
   m_ObjectHideFlags: 1

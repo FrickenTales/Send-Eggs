@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4523777112521566}
   - component: {fileID: 114891432897841790}
   - component: {fileID: 114852987379434896}
+  - component: {fileID: 114350268074868174}
   m_Layer: 0
   m_Name: Level_0_Default
   m_TagString: Untagged
@@ -578,6 +579,21 @@ MonoBehaviour:
   whatisGround:
     serializedVersion: 2
     m_Bits: 4294966783
+--- !u!114 &114350268074868174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161082639959794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 207469858, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Level0
+  m_TrackableProperty:
+    m_Fields: []
+  m_Trigger: 2
 --- !u!114 &114852987379434896
 MonoBehaviour:
   m_ObjectHideFlags: 1
