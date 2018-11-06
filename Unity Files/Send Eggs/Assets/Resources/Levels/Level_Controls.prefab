@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: A change in control
+  LevelName: A Change in Control
   levelTileColour: {r: 0.66, g: 0.56804, b: 0.4092, a: 1}
   levelBackgroundColour: {r: 0.8509804, g: 0.81359476, b: 0.7490196, a: 1}
 --- !u!114 &114782031597067374

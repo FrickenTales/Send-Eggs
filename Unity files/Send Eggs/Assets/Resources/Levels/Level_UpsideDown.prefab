@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Sunny side down
+  LevelName: Sunny Side Down
   levelTileColour: {r: 0.5754717, g: 0.16015486, b: 0.46814257, a: 1}
   levelBackgroundColour: {r: 0.7169812, g: 0.38892847, b: 0.63869584, a: 1}
 --- !u!114 &114666828608913276

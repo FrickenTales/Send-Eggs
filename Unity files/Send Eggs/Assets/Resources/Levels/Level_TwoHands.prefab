@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2136f2590798f44d9b6ea3228cb2c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: ambideggstrous
+  LevelName: Ambideggstrous
   levelTileColour: {r: 0.49611166, g: 0.65882355, b: 0.40784314, a: 1}
   levelBackgroundColour: {r: 0.7847059, g: 0.8509804, b: 0.7490196, a: 1}
 --- !u!114 &114525799404125830

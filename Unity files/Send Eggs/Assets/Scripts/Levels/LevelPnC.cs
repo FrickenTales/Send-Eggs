@@ -28,7 +28,7 @@ public class LevelPnC : MonoBehaviour {
     private void Awake()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked; //Confined
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         playerObject = transform.GetChild(0).gameObject;
         player = transform.GetChild(0).GetComponent<PlayerController>();
@@ -86,6 +86,7 @@ public class LevelPnC : MonoBehaviour {
     {
         player.transform.position = playerSpawn.position;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        player.GetComponent<Rigidbody2D>().gravityScale = 0;
         cartonanim.SetTrigger("SpawnEgg");
         player.anim.SetTrigger("Spawn");
     }
@@ -93,13 +94,21 @@ public class LevelPnC : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        float moveX = Input.GetAxis("Mouse X");
+        float moveY = Input.GetAxis("Mouse Y");
+
+        Vector3 mouseInput = new Vector3(moveX, moveY, 0);
         //playerStartPos = player.transform.position;
 
         if (ready)
         {
+            /*
             mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
             move = mousePos - mouseStartPos;
             playerObject.transform.position = playerSpawn.position + move;
+            */
+            playerObject.transform.position = playerObject.transform.position + (mouseInput / 2);
+
         }
         /*
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
