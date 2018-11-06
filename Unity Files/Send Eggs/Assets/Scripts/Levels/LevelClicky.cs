@@ -21,6 +21,8 @@ public class LevelClicky : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Cursor.visible = true;
+
         if (first)
         {
             oldButton = GameObject.Find("Button_Master");

@@ -81,6 +81,8 @@ public class GM : MonoBehaviour {
 
         if (paused)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             pauseUI.SetActive(true);
             Time.timeScale = 0;
         }
@@ -98,7 +100,8 @@ public class GM : MonoBehaviour {
 
     public void NewLevel()
     {
-        Cursor.visible = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
         cam.transform.eulerAngles = new Vector3(0, 0, 0);
         ResetAssets();
         wholeLevel.transform.position = new Vector3(0, 0, 0);
